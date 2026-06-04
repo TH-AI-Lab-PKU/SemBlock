@@ -1,0 +1,2 @@
+dataset,version,metric,mode,llada-1.5-8b-instruct
+openai_humaneval,8e312c,humaneval_pass@1,gen,50.00

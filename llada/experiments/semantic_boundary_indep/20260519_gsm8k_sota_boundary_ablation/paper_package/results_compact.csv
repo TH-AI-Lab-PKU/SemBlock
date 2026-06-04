@@ -1,0 +1,5 @@
+variant,boundary_signal,limit,strict_em,flexible_em,delta_vs_sota,avg_nfe,avg_blocks,avg_block_len,note
+sota_hybrid,"math head + NL delimiter",300,0.8533,0.8533,0.0000,104.48,26.87,19.06,"Existing SOTA limit-300 reference"
+delimiter_only_adablock,"NL delimiter only",300,0.8233,0.8300,-0.0300,102.75,24.94,20.53,"Remove learned math boundary head"
+math_head_only,"math head only",300,0.8367,0.8400,-0.0167,112.08,34.93,14.66,"Remove delimiter confidence from the hybrid score"
+

@@ -1,0 +1,2619 @@
+{
+  "summary_type": "semantic_vs_adablock_boundary_overlap",
+  "task_summaries": [
+    {
+      "task_name": "humaneval_sota_vs_adablock",
+      "shared_sample_count": 32,
+      "semantic_boundary_count": 347,
+      "adablock_boundary_count": 1015,
+      "semantic_boundaries_per_sample_mean": 10.84375,
+      "adablock_boundaries_per_sample_mean": 31.71875,
+      "semantic_to_adablock_count_ratio": 0.341871921182266,
+      "exact": {
+        "intersection_count": 23,
+        "union_count": 1339,
+        "jaccard": 0.01717699775952203,
+        "semantic_to_adablock_precision": 0.06628242074927954,
+        "adablock_to_semantic_recall": 0.022660098522167486
+      },
+      "tolerance": {
+        "0": {
+          "semantic_to_adablock_precision": 0.06628242074927954,
+          "adablock_to_semantic_recall": 0.022660098522167486
+        },
+        "1": {
+          "semantic_to_adablock_precision": 0.25360230547550433,
+          "adablock_to_semantic_recall": 0.0916256157635468
+        },
+        "2": {
+          "semantic_to_adablock_precision": 0.31988472622478387,
+          "adablock_to_semantic_recall": 0.12807881773399016
+        },
+        "4": {
+          "semantic_to_adablock_precision": 0.4668587896253602,
+          "adablock_to_semantic_recall": 0.20886699507389161
+        },
+        "8": {
+          "semantic_to_adablock_precision": 0.6685878962536023,
+          "adablock_to_semantic_recall": 0.3477832512315271
+        }
+      },
+      "nearest_distance": {
+        "semantic_to_adablock_mean": 6.783861671469741,
+        "semantic_to_adablock_median": 5.0,
+        "semantic_to_adablock_p90": 14.0,
+        "adablock_to_semantic_mean": 44.26108374384236,
+        "adablock_to_semantic_median": 14.0,
+        "adablock_to_semantic_p90": 121.60000000000002
+      },
+      "per_sample": [
+        {
+          "sample_key": "HumanEval/102",
+          "semantic_sample_id": "HumanEval/102",
+          "adablock_sample_id": "HumanEval/102",
+          "semantic_boundary_count": 3,
+          "adablock_boundary_count": 22,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            34,
+            78
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            92,
+            93,
+            125,
+            142,
+            161,
+            164,
+            181,
+            200,
+            201,
+            202,
+            206,
+            238,
+            270,
+            302,
+            334,
+            366,
+            398,
+            409,
+            448,
+            495
+          ],
+          "nearest_semantic_to_adablock_mean": 15.666666666666666,
+          "nearest_adablock_to_semantic_mean": 158.3181818181818,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.045454545454545456
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.045454545454545456
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.045454545454545456
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/117",
+          "semantic_sample_id": "HumanEval/117",
+          "adablock_sample_id": "HumanEval/117",
+          "semantic_boundary_count": 10,
+          "adablock_boundary_count": 34,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            69,
+            73,
+            75,
+            78,
+            118,
+            146,
+            164,
+            301,
+            302
+          ],
+          "adablock_offsets": [
+            32,
+            40,
+            47,
+            52,
+            53,
+            60,
+            92,
+            95,
+            96,
+            100,
+            101,
+            133,
+            151,
+            168,
+            186,
+            206,
+            208,
+            209,
+            213,
+            245,
+            277,
+            291,
+            323,
+            334,
+            337,
+            338,
+            343,
+            375,
+            376,
+            418,
+            419,
+            478,
+            479,
+            511
+          ],
+          "nearest_semantic_to_adablock_mean": 12.7,
+          "nearest_adablock_to_semantic_mean": 47.911764705882355,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.1,
+              "adablock_to_semantic_recall": 0.029411764705882353
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.058823529411764705
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/12",
+          "semantic_sample_id": "HumanEval/12",
+          "adablock_sample_id": "HumanEval/12",
+          "semantic_boundary_count": 17,
+          "adablock_boundary_count": 27,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            44,
+            128,
+            159,
+            168,
+            194,
+            198,
+            237,
+            243,
+            262,
+            339,
+            345,
+            364,
+            385,
+            395,
+            466,
+            487
+          ],
+          "adablock_offsets": [
+            6,
+            10,
+            11,
+            20,
+            52,
+            61,
+            67,
+            75,
+            77,
+            78,
+            82,
+            114,
+            146,
+            150,
+            182,
+            188,
+            206,
+            209,
+            241,
+            273,
+            305,
+            337,
+            369,
+            401,
+            433,
+            465,
+            497
+          ],
+          "nearest_semantic_to_adablock_mean": 7.588235294117647,
+          "nearest_adablock_to_semantic_mean": 14.962962962962964,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.058823529411764705,
+              "adablock_to_semantic_recall": 0.037037037037037035
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.17647058823529413,
+              "adablock_to_semantic_recall": 0.1111111111111111
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.23529411764705882,
+              "adablock_to_semantic_recall": 0.1111111111111111
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6470588235294118,
+              "adablock_to_semantic_recall": 0.3333333333333333
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/128",
+          "semantic_sample_id": "HumanEval/128",
+          "adablock_sample_id": "HumanEval/128",
+          "semantic_boundary_count": 13,
+          "adablock_boundary_count": 35,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            35,
+            72,
+            106,
+            171,
+            269,
+            357,
+            395,
+            398,
+            430,
+            433,
+            449,
+            463
+          ],
+          "adablock_offsets": [
+            10,
+            11,
+            43,
+            46,
+            52,
+            56,
+            62,
+            63,
+            67,
+            68,
+            100,
+            132,
+            164,
+            196,
+            200,
+            218,
+            234,
+            235,
+            240,
+            272,
+            304,
+            336,
+            353,
+            365,
+            377,
+            392,
+            393,
+            425,
+            457,
+            460,
+            466,
+            474,
+            476,
+            477,
+            509
+          ],
+          "nearest_semantic_to_adablock_mean": 5.538461538461538,
+          "nearest_adablock_to_semantic_mean": 15.2,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.07692307692307693,
+              "adablock_to_semantic_recall": 0.02857142857142857
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.38461538461538464,
+              "adablock_to_semantic_recall": 0.2
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9230769230769231,
+              "adablock_to_semantic_recall": 0.4
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/135",
+          "semantic_sample_id": "HumanEval/135",
+          "adablock_sample_id": "HumanEval/135",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 20,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            37,
+            39,
+            88,
+            128,
+            130,
+            262,
+            273,
+            297,
+            312,
+            322,
+            355,
+            383,
+            404,
+            406
+          ],
+          "adablock_offsets": [
+            32,
+            35,
+            36,
+            68,
+            84,
+            86,
+            87,
+            119,
+            151,
+            183,
+            215,
+            247,
+            279,
+            311,
+            343,
+            375,
+            407,
+            439,
+            471,
+            503
+          ],
+          "nearest_semantic_to_adablock_mean": 8.466666666666667,
+          "nearest_adablock_to_semantic_mean": 20.15,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.26666666666666666,
+              "adablock_to_semantic_recall": 0.2
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.26666666666666666,
+              "adablock_to_semantic_recall": 0.3
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4,
+              "adablock_to_semantic_recall": 0.35
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.5333333333333333,
+              "adablock_to_semantic_recall": 0.5
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/144",
+          "semantic_sample_id": "HumanEval/144",
+          "adablock_sample_id": "HumanEval/144",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 44,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.017241379310344827,
+          "semantic_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "adablock_offsets": [
+            3,
+            7,
+            10,
+            12,
+            13,
+            45,
+            59,
+            91,
+            93,
+            125,
+            131,
+            163,
+            168,
+            170,
+            178,
+            179,
+            188,
+            198,
+            207,
+            217,
+            219,
+            229,
+            251,
+            262,
+            263,
+            274,
+            275,
+            279,
+            299,
+            319,
+            343,
+            344,
+            348,
+            380,
+            383,
+            384,
+            394,
+            412,
+            444,
+            449,
+            453,
+            485,
+            488,
+            489
+          ],
+          "nearest_semantic_to_adablock_mean": 4.333333333333333,
+          "nearest_adablock_to_semantic_mean": 8.522727272727273,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.06666666666666667,
+              "adablock_to_semantic_recall": 0.022727272727272728
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.09090909090909091
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.09090909090909091
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.29545454545454547
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.8666666666666667,
+              "adablock_to_semantic_recall": 0.6136363636363636
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/145",
+          "semantic_sample_id": "HumanEval/145",
+          "adablock_sample_id": "HumanEval/145",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 17,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.03225806451612903,
+          "semantic_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "adablock_offsets": [
+            32,
+            41,
+            42,
+            74,
+            106,
+            138,
+            170,
+            202,
+            234,
+            266,
+            298,
+            330,
+            362,
+            394,
+            426,
+            458,
+            490
+          ],
+          "nearest_semantic_to_adablock_mean": 9.333333333333334,
+          "nearest_adablock_to_semantic_mean": 9.352941176470589,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.06666666666666667,
+              "adablock_to_semantic_recall": 0.058823529411764705
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.06666666666666667,
+              "adablock_to_semantic_recall": 0.058823529411764705
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.06666666666666667,
+              "adablock_to_semantic_recall": 0.058823529411764705
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.06666666666666667,
+              "adablock_to_semantic_recall": 0.058823529411764705
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.06666666666666667,
+              "adablock_to_semantic_recall": 0.058823529411764705
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/149",
+          "semantic_sample_id": "HumanEval/149",
+          "adablock_sample_id": "HumanEval/149",
+          "semantic_boundary_count": 4,
+          "adablock_boundary_count": 26,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.07142857142857142,
+          "semantic_offsets": [
+            1,
+            35,
+            37,
+            79
+          ],
+          "adablock_offsets": [
+            32,
+            35,
+            37,
+            69,
+            75,
+            77,
+            82,
+            83,
+            87,
+            105,
+            129,
+            161,
+            193,
+            225,
+            234,
+            266,
+            288,
+            315,
+            342,
+            369,
+            396,
+            423,
+            450,
+            477,
+            504,
+            505
+          ],
+          "nearest_semantic_to_adablock_mean": 8.25,
+          "nearest_adablock_to_semantic_mean": 156.65384615384616,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.07692307692307693
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.07692307692307693
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.11538461538461539
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.2692307692307692
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.3076923076923077
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/152",
+          "semantic_sample_id": "HumanEval/152",
+          "adablock_sample_id": "HumanEval/152",
+          "semantic_boundary_count": 11,
+          "adablock_boundary_count": 27,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            36,
+            38,
+            90,
+            93,
+            123,
+            168,
+            190,
+            252,
+            384,
+            385,
+            469
+          ],
+          "adablock_offsets": [
+            32,
+            33,
+            65,
+            68,
+            72,
+            104,
+            105,
+            109,
+            110,
+            114,
+            146,
+            176,
+            238,
+            240,
+            241,
+            245,
+            277,
+            309,
+            324,
+            356,
+            388,
+            393,
+            398,
+            430,
+            456,
+            457,
+            489
+          ],
+          "nearest_semantic_to_adablock_mean": 8.181818181818182,
+          "nearest_adablock_to_semantic_mean": 17.88888888888889,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.2727272727272727,
+              "adablock_to_semantic_recall": 0.1111111111111111
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.5454545454545454,
+              "adablock_to_semantic_recall": 0.2222222222222222
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/157",
+          "semantic_sample_id": "HumanEval/157",
+          "adablock_sample_id": "HumanEval/157",
+          "semantic_boundary_count": 1,
+          "adablock_boundary_count": 21,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1
+          ],
+          "adablock_offsets": [
+            32,
+            40,
+            60,
+            62,
+            63,
+            95,
+            127,
+            159,
+            191,
+            223,
+            228,
+            229,
+            261,
+            299,
+            300,
+            332,
+            364,
+            396,
+            428,
+            460,
+            492
+          ],
+          "nearest_semantic_to_adablock_mean": 31.0,
+          "nearest_adablock_to_semantic_mean": 229.52380952380952,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/160",
+          "semantic_sample_id": "HumanEval/160",
+          "adablock_sample_id": "HumanEval/160",
+          "semantic_boundary_count": 5,
+          "adablock_boundary_count": 32,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.027777777777777776,
+          "semantic_offsets": [
+            1,
+            47,
+            63,
+            98,
+            324
+          ],
+          "adablock_offsets": [
+            32,
+            41,
+            48,
+            57,
+            64,
+            73,
+            80,
+            81,
+            90,
+            91,
+            98,
+            99,
+            103,
+            116,
+            121,
+            131,
+            146,
+            166,
+            170,
+            202,
+            213,
+            245,
+            277,
+            309,
+            312,
+            344,
+            376,
+            381,
+            413,
+            445,
+            477,
+            509
+          ],
+          "nearest_semantic_to_adablock_mean": 9.0,
+          "nearest_adablock_to_semantic_mean": 43.78125,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.03125
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.125
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.125
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.125
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.28125
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/161",
+          "semantic_sample_id": "HumanEval/161",
+          "adablock_sample_id": "HumanEval/161",
+          "semantic_boundary_count": 21,
+          "adablock_boundary_count": 45,
+          "exact_intersection_count": 5,
+          "exact_jaccard": 0.08196721311475409,
+          "semantic_offsets": [
+            43,
+            54,
+            64,
+            66,
+            112,
+            129,
+            197,
+            227,
+            240,
+            250,
+            292,
+            297,
+            339,
+            350,
+            360,
+            361,
+            409,
+            440,
+            480,
+            483,
+            484
+          ],
+          "adablock_offsets": [
+            32,
+            38,
+            45,
+            49,
+            56,
+            60,
+            65,
+            66,
+            70,
+            71,
+            103,
+            109,
+            126,
+            129,
+            161,
+            193,
+            198,
+            208,
+            231,
+            240,
+            253,
+            263,
+            266,
+            282,
+            292,
+            305,
+            308,
+            319,
+            320,
+            325,
+            332,
+            339,
+            346,
+            353,
+            357,
+            364,
+            368,
+            373,
+            374,
+            406,
+            425,
+            439,
+            456,
+            459,
+            491
+          ],
+          "nearest_semantic_to_adablock_mean": 2.857142857142857,
+          "nearest_adablock_to_semantic_mean": 7.4,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.23809523809523808,
+              "adablock_to_semantic_recall": 0.1111111111111111
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.38095238095238093,
+              "adablock_to_semantic_recall": 0.17777777777777778
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.47619047619047616,
+              "adablock_to_semantic_recall": 0.2222222222222222
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.8095238095238095,
+              "adablock_to_semantic_recall": 0.4888888888888889
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9523809523809523,
+              "adablock_to_semantic_recall": 0.6444444444444445
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/163",
+          "semantic_sample_id": "HumanEval/163",
+          "adablock_sample_id": "HumanEval/163",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 29,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.022727272727272728,
+          "semantic_offsets": [
+            1,
+            112,
+            114,
+            117,
+            123,
+            124,
+            126,
+            131,
+            172,
+            200,
+            218,
+            253,
+            326,
+            408,
+            459,
+            495
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            67,
+            76,
+            108,
+            117,
+            149,
+            151,
+            153,
+            162,
+            163,
+            191,
+            219,
+            237,
+            248,
+            250,
+            251,
+            255,
+            287,
+            319,
+            351,
+            368,
+            369,
+            370,
+            375,
+            407,
+            439,
+            471,
+            503
+          ],
+          "nearest_semantic_to_adablock_mean": 7.6875,
+          "nearest_adablock_to_semantic_mean": 18.448275862068964,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.034482758620689655
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.1875,
+              "adablock_to_semantic_recall": 0.10344827586206896
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.25,
+              "adablock_to_semantic_recall": 0.1724137931034483
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.375,
+              "adablock_to_semantic_recall": 0.2413793103448276
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.625,
+              "adablock_to_semantic_recall": 0.3448275862068966
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/17",
+          "semantic_sample_id": "HumanEval/17",
+          "adablock_sample_id": "HumanEval/17",
+          "semantic_boundary_count": 20,
+          "adablock_boundary_count": 35,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.03773584905660377,
+          "semantic_offsets": [
+            1,
+            7,
+            27,
+            43,
+            58,
+            59,
+            171,
+            172,
+            194,
+            215,
+            313,
+            333,
+            334,
+            344,
+            354,
+            364,
+            374,
+            384,
+            394,
+            432
+          ],
+          "adablock_offsets": [
+            5,
+            13,
+            21,
+            28,
+            37,
+            44,
+            52,
+            59,
+            63,
+            64,
+            65,
+            75,
+            81,
+            89,
+            91,
+            92,
+            96,
+            128,
+            160,
+            192,
+            195,
+            216,
+            248,
+            254,
+            255,
+            260,
+            292,
+            325,
+            326,
+            330,
+            362,
+            394,
+            426,
+            458,
+            490
+          ],
+          "nearest_semantic_to_adablock_mean": 5.25,
+          "nearest_adablock_to_semantic_mean": 15.971428571428572,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.1,
+              "adablock_to_semantic_recall": 0.05714285714285714
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.35,
+              "adablock_to_semantic_recall": 0.17142857142857143
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.45,
+              "adablock_to_semantic_recall": 0.2571428571428571
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.3142857142857143
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.7,
+              "adablock_to_semantic_recall": 0.5714285714285714
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/20",
+          "semantic_sample_id": "HumanEval/20",
+          "adablock_sample_id": "HumanEval/20",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 36,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            34,
+            35,
+            72,
+            83,
+            97,
+            109,
+            110,
+            211,
+            284,
+            285,
+            287,
+            375,
+            389,
+            439
+          ],
+          "adablock_offsets": [
+            11,
+            25,
+            26,
+            58,
+            67,
+            80,
+            88,
+            94,
+            106,
+            107,
+            112,
+            113,
+            114,
+            124,
+            130,
+            138,
+            140,
+            141,
+            145,
+            177,
+            209,
+            241,
+            273,
+            275,
+            307,
+            320,
+            325,
+            328,
+            360,
+            378,
+            428,
+            431,
+            463,
+            473,
+            476,
+            508
+          ],
+          "nearest_semantic_to_adablock_mean": 6.466666666666667,
+          "nearest_adablock_to_semantic_mean": 18.0,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.08333333333333333
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.3611111111111111
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/22",
+          "semantic_sample_id": "HumanEval/22",
+          "adablock_sample_id": "HumanEval/22",
+          "semantic_boundary_count": 12,
+          "adablock_boundary_count": 40,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            163,
+            236,
+            281,
+            284,
+            356,
+            391,
+            456,
+            461,
+            482,
+            493,
+            496
+          ],
+          "adablock_offsets": [
+            16,
+            17,
+            49,
+            81,
+            95,
+            106,
+            109,
+            124,
+            125,
+            126,
+            141,
+            153,
+            170,
+            175,
+            195,
+            203,
+            206,
+            221,
+            222,
+            223,
+            238,
+            251,
+            268,
+            271,
+            273,
+            293,
+            325,
+            340,
+            353,
+            371,
+            376,
+            397,
+            408,
+            411,
+            426,
+            427,
+            428,
+            460,
+            494,
+            497
+          ],
+          "nearest_semantic_to_adablock_mean": 5.75,
+          "nearest_adablock_to_semantic_mean": 22.75,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.25,
+              "adablock_to_semantic_recall": 0.075
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.1
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.125
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.2
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/23",
+          "semantic_sample_id": "HumanEval/23",
+          "adablock_sample_id": "HumanEval/23",
+          "semantic_boundary_count": 13,
+          "adablock_boundary_count": 59,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.014084507042253521,
+          "semantic_offsets": [
+            41,
+            47,
+            51,
+            60,
+            94,
+            102,
+            117,
+            221,
+            288,
+            333,
+            344,
+            447,
+            456
+          ],
+          "adablock_offsets": [
+            6,
+            7,
+            39,
+            41,
+            46,
+            49,
+            55,
+            56,
+            88,
+            91,
+            95,
+            106,
+            110,
+            113,
+            121,
+            122,
+            154,
+            158,
+            162,
+            173,
+            174,
+            175,
+            207,
+            209,
+            214,
+            226,
+            227,
+            259,
+            262,
+            273,
+            276,
+            285,
+            286,
+            318,
+            320,
+            326,
+            327,
+            338,
+            345,
+            353,
+            358,
+            361,
+            367,
+            368,
+            379,
+            411,
+            412,
+            413,
+            424,
+            457,
+            460,
+            461,
+            472,
+            484,
+            493,
+            499,
+            502,
+            508,
+            509
+          ],
+          "nearest_semantic_to_adablock_mean": 3.076923076923077,
+          "nearest_adablock_to_semantic_mean": 18.52542372881356,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.07692307692307693,
+              "adablock_to_semantic_recall": 0.01694915254237288
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.38461538461538464,
+              "adablock_to_semantic_recall": 0.0847457627118644
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.5384615384615384,
+              "adablock_to_semantic_recall": 0.13559322033898305
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.7692307692307693,
+              "adablock_to_semantic_recall": 0.2711864406779661
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9230769230769231,
+              "adablock_to_semantic_recall": 0.4406779661016949
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/24",
+          "semantic_sample_id": "HumanEval/24",
+          "adablock_sample_id": "HumanEval/24",
+          "semantic_boundary_count": 5,
+          "adablock_boundary_count": 18,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            35,
+            72,
+            152,
+            153
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            66,
+            70,
+            71,
+            103,
+            135,
+            167,
+            199,
+            231,
+            263,
+            295,
+            327,
+            359,
+            391,
+            423,
+            455,
+            487
+          ],
+          "nearest_semantic_to_adablock_mean": 12.8,
+          "nearest_adablock_to_semantic_mean": 110.11111111111111,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.05555555555555555
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.1111111111111111
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4,
+              "adablock_to_semantic_recall": 0.16666666666666666
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.4,
+              "adablock_to_semantic_recall": 0.2777777777777778
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/33",
+          "semantic_sample_id": "HumanEval/33",
+          "adablock_sample_id": "HumanEval/33",
+          "semantic_boundary_count": 6,
+          "adablock_boundary_count": 30,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            43,
+            180,
+            259,
+            319,
+            352
+          ],
+          "adablock_offsets": [
+            32,
+            36,
+            44,
+            47,
+            51,
+            52,
+            62,
+            68,
+            76,
+            78,
+            79,
+            83,
+            115,
+            127,
+            128,
+            160,
+            192,
+            224,
+            231,
+            232,
+            237,
+            269,
+            317,
+            318,
+            350,
+            382,
+            414,
+            446,
+            478,
+            510
+          ],
+          "nearest_semantic_to_adablock_mean": 9.5,
+          "nearest_adablock_to_semantic_mean": 34.233333333333334,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.06666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.13333333333333333
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.16666666666666666
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.23333333333333334
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/35",
+          "semantic_sample_id": "HumanEval/35",
+          "adablock_sample_id": "HumanEval/35",
+          "semantic_boundary_count": 6,
+          "adablock_boundary_count": 20,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            43,
+            48,
+            147,
+            189,
+            190
+          ],
+          "adablock_offsets": [
+            6,
+            10,
+            42,
+            44,
+            49,
+            50,
+            82,
+            114,
+            146,
+            178,
+            210,
+            242,
+            274,
+            306,
+            338,
+            370,
+            402,
+            434,
+            466,
+            498
+          ],
+          "nearest_semantic_to_adablock_mean": 5.166666666666667,
+          "nearest_adablock_to_semantic_mean": 86.9,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.2
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6666666666666666,
+              "adablock_to_semantic_recall": 0.3
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/38",
+          "semantic_sample_id": "HumanEval/38",
+          "adablock_sample_id": "HumanEval/38",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 33,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "adablock_offsets": [
+            14,
+            54,
+            72,
+            100,
+            109,
+            110,
+            111,
+            143,
+            153,
+            159,
+            161,
+            162,
+            166,
+            198,
+            230,
+            234,
+            235,
+            244,
+            276,
+            291,
+            305,
+            306,
+            311,
+            343,
+            344,
+            345,
+            349,
+            351,
+            353,
+            385,
+            417,
+            449,
+            481
+          ],
+          "nearest_semantic_to_adablock_mean": 5.8,
+          "nearest_adablock_to_semantic_mean": 7.424242424242424,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4,
+              "adablock_to_semantic_recall": 0.24242424242424243
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4,
+              "adablock_to_semantic_recall": 0.2727272727272727
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5333333333333333,
+              "adablock_to_semantic_recall": 0.36363636363636365
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.7333333333333333,
+              "adablock_to_semantic_recall": 0.5757575757575758
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/46",
+          "semantic_sample_id": "HumanEval/46",
+          "adablock_sample_id": "HumanEval/46",
+          "semantic_boundary_count": 11,
+          "adablock_boundary_count": 60,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.028985507246376812,
+          "semantic_offsets": [
+            1,
+            35,
+            38,
+            51,
+            87,
+            90,
+            128,
+            257,
+            293,
+            300,
+            376
+          ],
+          "adablock_offsets": [
+            8,
+            13,
+            21,
+            26,
+            39,
+            47,
+            52,
+            56,
+            60,
+            65,
+            78,
+            86,
+            91,
+            92,
+            106,
+            120,
+            128,
+            134,
+            143,
+            150,
+            166,
+            175,
+            182,
+            191,
+            198,
+            207,
+            214,
+            223,
+            231,
+            240,
+            248,
+            257,
+            265,
+            274,
+            282,
+            291,
+            299,
+            308,
+            317,
+            326,
+            335,
+            344,
+            353,
+            362,
+            371,
+            380,
+            389,
+            398,
+            408,
+            417,
+            427,
+            436,
+            446,
+            455,
+            465,
+            474,
+            484,
+            493,
+            504,
+            508
+          ],
+          "nearest_semantic_to_adablock_mean": 2.0,
+          "nearest_adablock_to_semantic_mean": 30.65,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.18181818181818182,
+              "adablock_to_semantic_recall": 0.03333333333333333
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.6363636363636364,
+              "adablock_to_semantic_recall": 0.11666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.7272727272727273,
+              "adablock_to_semantic_recall": 0.15
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.9090909090909091,
+              "adablock_to_semantic_recall": 0.18333333333333332
+            },
+            "8": {
+              "semantic_to_adablock_precision": 1.0,
+              "adablock_to_semantic_recall": 0.3
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/51",
+          "semantic_sample_id": "HumanEval/51",
+          "adablock_sample_id": "HumanEval/51",
+          "semantic_boundary_count": 1,
+          "adablock_boundary_count": 18,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1
+          ],
+          "adablock_offsets": [
+            32,
+            36,
+            40,
+            41,
+            73,
+            105,
+            137,
+            169,
+            201,
+            233,
+            265,
+            297,
+            329,
+            361,
+            393,
+            425,
+            457,
+            489
+          ],
+          "nearest_semantic_to_adablock_mean": 31.0,
+          "nearest_adablock_to_semantic_mean": 225.83333333333334,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/54",
+          "semantic_sample_id": "HumanEval/54",
+          "adablock_sample_id": "HumanEval/54",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 48,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            39,
+            41,
+            76,
+            111,
+            144,
+            161,
+            181,
+            186,
+            226,
+            296,
+            329,
+            346,
+            366,
+            411
+          ],
+          "adablock_offsets": [
+            12,
+            16,
+            48,
+            57,
+            63,
+            71,
+            73,
+            74,
+            78,
+            110,
+            142,
+            146,
+            178,
+            193,
+            225,
+            257,
+            258,
+            259,
+            262,
+            276,
+            279,
+            290,
+            308,
+            311,
+            324,
+            327,
+            340,
+            343,
+            357,
+            360,
+            374,
+            377,
+            394,
+            397,
+            400,
+            412,
+            416,
+            426,
+            438,
+            442,
+            446,
+            447,
+            457,
+            463,
+            471,
+            473,
+            474,
+            506
+          ],
+          "nearest_semantic_to_adablock_mean": 5.066666666666666,
+          "nearest_adablock_to_semantic_mean": 18.958333333333332,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4,
+              "adablock_to_semantic_recall": 0.16666666666666666
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5333333333333333,
+              "adablock_to_semantic_recall": 0.22916666666666666
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.8,
+              "adablock_to_semantic_recall": 0.4166666666666667
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/59",
+          "semantic_sample_id": "HumanEval/59",
+          "adablock_sample_id": "HumanEval/59",
+          "semantic_boundary_count": 11,
+          "adablock_boundary_count": 29,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            105,
+            171,
+            206,
+            241,
+            276,
+            311,
+            346,
+            381,
+            416,
+            451
+          ],
+          "adablock_offsets": [
+            32,
+            37,
+            45,
+            46,
+            78,
+            110,
+            142,
+            174,
+            177,
+            183,
+            191,
+            193,
+            194,
+            198,
+            230,
+            236,
+            237,
+            269,
+            301,
+            333,
+            365,
+            369,
+            401,
+            433,
+            435,
+            467,
+            471,
+            472,
+            504
+          ],
+          "nearest_semantic_to_adablock_mean": 11.272727272727273,
+          "nearest_adablock_to_semantic_mean": 18.0,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.18181818181818182,
+              "adablock_to_semantic_recall": 0.06896551724137931
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.45454545454545453,
+              "adablock_to_semantic_recall": 0.2413793103448276
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/61",
+          "semantic_sample_id": "HumanEval/61",
+          "adablock_sample_id": "HumanEval/61",
+          "semantic_boundary_count": 6,
+          "adablock_boundary_count": 29,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            1,
+            130,
+            174,
+            175,
+            208,
+            228
+          ],
+          "adablock_offsets": [
+            5,
+            12,
+            19,
+            25,
+            32,
+            37,
+            38,
+            42,
+            47,
+            79,
+            81,
+            82,
+            86,
+            118,
+            150,
+            182,
+            214,
+            220,
+            221,
+            253,
+            265,
+            266,
+            298,
+            330,
+            362,
+            394,
+            426,
+            458,
+            490
+          ],
+          "nearest_semantic_to_adablock_mean": 7.333333333333333,
+          "nearest_adablock_to_semantic_mean": 60.758620689655174,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.16666666666666666,
+              "adablock_to_semantic_recall": 0.034482758620689655
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.8333333333333334,
+              "adablock_to_semantic_recall": 0.1724137931034483
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/67",
+          "semantic_sample_id": "HumanEval/67",
+          "adablock_sample_id": "HumanEval/67",
+          "semantic_boundary_count": 8,
+          "adablock_boundary_count": 29,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.027777777777777776,
+          "semantic_offsets": [
+            37,
+            39,
+            117,
+            162,
+            169,
+            226,
+            405,
+            444
+          ],
+          "adablock_offsets": [
+            32,
+            38,
+            40,
+            49,
+            60,
+            62,
+            68,
+            69,
+            73,
+            96,
+            118,
+            169,
+            170,
+            172,
+            173,
+            205,
+            225,
+            257,
+            289,
+            310,
+            327,
+            328,
+            333,
+            365,
+            372,
+            409,
+            452,
+            499,
+            500
+          ],
+          "nearest_semantic_to_adablock_mean": 2.875,
+          "nearest_adablock_to_semantic_mean": 27.82758620689655,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.125,
+              "adablock_to_semantic_recall": 0.034482758620689655
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.625,
+              "adablock_to_semantic_recall": 0.20689655172413793
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.625,
+              "adablock_to_semantic_recall": 0.20689655172413793
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.3103448275862069
+            },
+            "8": {
+              "semantic_to_adablock_precision": 1.0,
+              "adablock_to_semantic_recall": 0.3793103448275862
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/70",
+          "semantic_sample_id": "HumanEval/70",
+          "adablock_sample_id": "HumanEval/70",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 30,
+          "exact_intersection_count": 4,
+          "exact_jaccard": 0.09523809523809523,
+          "semantic_offsets": [
+            1,
+            9,
+            19,
+            28,
+            29,
+            37,
+            71,
+            81,
+            86,
+            126,
+            160,
+            173,
+            175,
+            218,
+            291,
+            304
+          ],
+          "adablock_offsets": [
+            6,
+            10,
+            11,
+            20,
+            29,
+            61,
+            64,
+            70,
+            74,
+            80,
+            86,
+            91,
+            126,
+            159,
+            172,
+            174,
+            175,
+            179,
+            211,
+            220,
+            252,
+            284,
+            287,
+            319,
+            351,
+            383,
+            415,
+            447,
+            479,
+            511
+          ],
+          "nearest_semantic_to_adablock_mean": 2.5625,
+          "nearest_adablock_to_semantic_mean": 29.066666666666666,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.25,
+              "adablock_to_semantic_recall": 0.13333333333333333
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.6875,
+              "adablock_to_semantic_recall": 0.36666666666666664
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.43333333333333335
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.8125,
+              "adablock_to_semantic_recall": 0.5666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 0.7
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/84",
+          "semantic_sample_id": "HumanEval/84",
+          "adablock_sample_id": "HumanEval/84",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 22,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.027777777777777776,
+          "semantic_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "adablock_offsets": [
+            32,
+            42,
+            44,
+            76,
+            93,
+            110,
+            129,
+            131,
+            132,
+            164,
+            165,
+            197,
+            203,
+            235,
+            267,
+            299,
+            331,
+            363,
+            395,
+            427,
+            459,
+            491
+          ],
+          "nearest_semantic_to_adablock_mean": 8.266666666666667,
+          "nearest_adablock_to_semantic_mean": 8.318181818181818,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.06666666666666667,
+              "adablock_to_semantic_recall": 0.045454545454545456
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.13333333333333333,
+              "adablock_to_semantic_recall": 0.09090909090909091
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.13333333333333333,
+              "adablock_to_semantic_recall": 0.09090909090909091
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.26666666666666666,
+              "adablock_to_semantic_recall": 0.2727272727272727
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.36363636363636365
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/92",
+          "semantic_sample_id": "HumanEval/92",
+          "adablock_sample_id": "HumanEval/92",
+          "semantic_boundary_count": 1,
+          "adablock_boundary_count": 32,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            33
+          ],
+          "adablock_offsets": [
+            32,
+            36,
+            38,
+            70,
+            82,
+            86,
+            90,
+            94,
+            95,
+            99,
+            117,
+            131,
+            147,
+            167,
+            169,
+            170,
+            202,
+            234,
+            236,
+            268,
+            300,
+            304,
+            336,
+            338,
+            370,
+            372,
+            404,
+            410,
+            442,
+            444,
+            476,
+            508
+          ],
+          "nearest_semantic_to_adablock_mean": 1.0,
+          "nearest_adablock_to_semantic_mean": 194.15625,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 1.0,
+              "adablock_to_semantic_recall": 0.03125
+            },
+            "2": {
+              "semantic_to_adablock_precision": 1.0,
+              "adablock_to_semantic_recall": 0.03125
+            },
+            "4": {
+              "semantic_to_adablock_precision": 1.0,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "8": {
+              "semantic_to_adablock_precision": 1.0,
+              "adablock_to_semantic_recall": 0.09375
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/94",
+          "semantic_sample_id": "HumanEval/94",
+          "adablock_sample_id": "HumanEval/94",
+          "semantic_boundary_count": 15,
+          "adablock_boundary_count": 38,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "adablock_offsets": [
+            7,
+            15,
+            18,
+            30,
+            42,
+            61,
+            65,
+            71,
+            80,
+            102,
+            106,
+            112,
+            116,
+            117,
+            149,
+            152,
+            153,
+            159,
+            166,
+            173,
+            205,
+            206,
+            207,
+            218,
+            219,
+            251,
+            283,
+            306,
+            307,
+            339,
+            371,
+            379,
+            411,
+            443,
+            460,
+            492,
+            494,
+            495
+          ],
+          "nearest_semantic_to_adablock_mean": 6.8,
+          "nearest_adablock_to_semantic_mean": 10.0,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.13333333333333333,
+              "adablock_to_semantic_recall": 0.05263157894736842
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.07894736842105263
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.10526315789473684
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6666666666666666,
+              "adablock_to_semantic_recall": 0.42105263157894735
+            }
+          }
+        },
+        {
+          "sample_key": "HumanEval/96",
+          "semantic_sample_id": "HumanEval/96",
+          "adablock_sample_id": "HumanEval/96",
+          "semantic_boundary_count": 10,
+          "adablock_boundary_count": 30,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.02564102564102564,
+          "semantic_offsets": [
+            1,
+            111,
+            115,
+            150,
+            156,
+            194,
+            262,
+            275,
+            311,
+            408
+          ],
+          "adablock_offsets": [
+            32,
+            42,
+            65,
+            71,
+            80,
+            102,
+            106,
+            112,
+            116,
+            117,
+            122,
+            128,
+            151,
+            157,
+            162,
+            163,
+            168,
+            186,
+            223,
+            224,
+            311,
+            315,
+            317,
+            318,
+            322,
+            354,
+            386,
+            418,
+            450,
+            482
+          ],
+          "nearest_semantic_to_adablock_mean": 12.7,
+          "nearest_adablock_to_semantic_mean": 18.0,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.1,
+              "adablock_to_semantic_recall": 0.03333333333333333
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.16666666666666666
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.2
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.23333333333333334
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            }
+          }
+        }
+      ],
+      "semantic_trace_path": "llada/experiments/semantic_boundary_indep/SOTA_ARCHIVE_20260512_generalized_v3_4695/results/full_humaneval_router_generalized_v3_sharded",
+      "adablock_trace_path": "llada/experiments/semantic_boundary_indep/20260510_adablock_he32_same_subset_dual_cache/traces",
+      "match_key": "sample_id",
+      "semantic_source": "accepted",
+      "adablock_source": "all",
+      "include_terminal": false
+    }
+  ],
+  "compact_task_summaries": [
+    {
+      "task_name": "humaneval_sota_vs_adablock",
+      "shared_sample_count": 32,
+      "semantic_boundary_count": 347,
+      "adablock_boundary_count": 1015,
+      "semantic_to_adablock_count_ratio": 0.341871921182266,
+      "exact_jaccard": 0.01717699775952203,
+      "exact_semantic_to_adablock_precision": 0.06628242074927954,
+      "exact_adablock_to_semantic_recall": 0.022660098522167486,
+      "nearest_semantic_to_adablock_mean": 6.783861671469741,
+      "nearest_adablock_to_semantic_mean": 44.26108374384236
+    }
+  ]
+}

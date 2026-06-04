@@ -1,0 +1,6 @@
+task,semantic_head,target_samples,matched_samples,semantic_boundaries,adablock_boundaries,exact_overlap_percent,jaccard_percent,note
+HumanEval,Code head,17,17,336,500,4.76,1.95,"Very low overlap"
+IFEval,GUM semantic head,55,55,881,1373,25.88,11.25,"Low overlap"
+GSM8K,Math head,132,132,3323,3088,65.45,51.35,"Moderate overlap; still non-identical"
+MATH,Math head,500,351,10781,10941,82.39,69.19,"Partial 351/500 matched result"
+

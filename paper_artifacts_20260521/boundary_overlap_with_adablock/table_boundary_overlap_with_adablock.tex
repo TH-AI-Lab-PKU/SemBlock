@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{l l c c c c}
+\toprule
+Task & Semantic head & Matched & Semantic bdrs. & AdaBlock bdrs. & Jaccard \\
+\midrule
+HumanEval & Code head & 17 & 336 & 500 & 1.95 \\
+IFEval & GUM semantic head & 55 & 881 & 1373 & 11.25 \\
+GSM8K & Math head & 132 & 3323 & 3088 & 51.35 \\
+MATH & Math head & 351 & 10781 & 10941 & 69.19 \\
+\bottomrule
+\end{tabular}
+\caption{Boundary overlap between our semantic scheduler and AdaBlock. Values are Jaccard overlap percentages. The low overlap on HumanEval and IFEval indicates that the learned semantic heads do not simply reproduce AdaBlock boundaries. Math tasks show higher overlap due to natural step and delimiter alignment, but remain non-identical.}
+\label{tab:boundary-overlap-adablock}
+\end{table}
+

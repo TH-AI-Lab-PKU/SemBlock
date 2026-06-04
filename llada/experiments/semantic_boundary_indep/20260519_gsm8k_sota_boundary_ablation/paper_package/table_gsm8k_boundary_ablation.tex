@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{l l c c c c c}
+\toprule
+Variant & Boundary signal & Limit & Strict EM & $\Delta$ & Avg. NFE & Avg. block len. \\
+\midrule
+SOTA hybrid & Math head + NL delimiter & 300 & \textbf{85.33} & 0.00 & 104.48 & 19.06 \\
+Delimiter only & NL delimiter only & 300 & 82.33 & -3.00 & 102.75 & 20.53 \\
+Math head only & Math head only & 300 & 83.67 & -1.67 & 112.08 & 14.66 \\
+\bottomrule
+\end{tabular}
+\caption{Boundary-signal ablation on GSM8K under the SOTA B=32 decoding setup. Removing either the learned math boundary head or the natural-language delimiter confidence degrades strict exact match, suggesting that task-semantic and natural-language boundary cues are complementary.}
+\label{tab:gsm8k-boundary-ablation}
+\end{table}
+

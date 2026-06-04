@@ -1,0 +1,5 @@
+task,semantic_head,target_samples,status,matched_samples,semantic_boundaries,adablock_boundaries,exact_overlap_rate,jaccard
+HumanEval,Code head,17,done,17,336,500,0.047619047619047616,0.01951219512195122
+IFEval,GUM semantic head,55,done,55,881,1373,0.25879682179341656,0.1125370187561698
+GSM8K,Math head,132,done,132,3323,3088,0.6545290400240746,0.5134560906515581
+MATH,Math head,500,partial 351/500,351,10781,10941,0.8239495408589185,0.6918763143547005

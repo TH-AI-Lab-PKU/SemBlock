@@ -1,0 +1,61 @@
+{
+  "dataset_path": "EleutherAI/hendrycks_math",
+  "subtasks": [
+    "algebra",
+    "counting_and_prob",
+    "geometry",
+    "intermediate_algebra",
+    "num_theory",
+    "prealgebra",
+    "precalc"
+  ],
+  "samples": 5000,
+  "boxed_predictions": 4741,
+  "correct": 1888,
+  "exact_match": 0.3776,
+  "by_subset": {
+    "algebra": {
+      "samples": 1187,
+      "boxed_predictions": 1113,
+      "correct": 635,
+      "exact_match": 0.5349620893007582
+    },
+    "counting_and_prob": {
+      "samples": 474,
+      "boxed_predictions": 444,
+      "correct": 162,
+      "exact_match": 0.34177215189873417
+    },
+    "geometry": {
+      "samples": 479,
+      "boxed_predictions": 463,
+      "correct": 149,
+      "exact_match": 0.31106471816283926
+    },
+    "intermediate_algebra": {
+      "samples": 903,
+      "boxed_predictions": 873,
+      "correct": 175,
+      "exact_match": 0.1937984496124031
+    },
+    "num_theory": {
+      "samples": 540,
+      "boxed_predictions": 514,
+      "correct": 186,
+      "exact_match": 0.34444444444444444
+    },
+    "prealgebra": {
+      "samples": 871,
+      "boxed_predictions": 799,
+      "correct": 477,
+      "exact_match": 0.547646383467279
+    },
+    "precalc": {
+      "samples": 546,
+      "boxed_predictions": 535,
+      "correct": 104,
+      "exact_match": 0.19047619047619047
+    }
+  },
+  "cache_jsonl": "/home/nvme01/workspace/AdaBlock-dLLM-main/llada/resume_cache_math/aqua_hendrycks_math_full_20260512/hendrycks_math/semantic_hybrid_b32_cache_on_full_thr0p60_minb8_selmax_score_above_threshold_mix0p70_dthr0p30_landfalse/rank_0.jsonl"
+}

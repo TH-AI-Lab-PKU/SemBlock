@@ -1,0 +1,3935 @@
+{
+  "summary_type": "semantic_vs_adablock_boundary_overlap",
+  "task_summaries": [
+    {
+      "task_name": "ifeval_jitter8_vs_clean",
+      "shared_sample_count": 55,
+      "semantic_boundary_count": 946,
+      "adablock_boundary_count": 881,
+      "semantic_boundaries_per_sample_mean": 17.2,
+      "adablock_boundaries_per_sample_mean": 16.01818181818182,
+      "semantic_to_adablock_count_ratio": 1.0737797956867197,
+      "exact": {
+        "intersection_count": 276,
+        "union_count": 1551,
+        "jaccard": 0.17794970986460348,
+        "semantic_to_adablock_precision": 0.2917547568710359,
+        "adablock_to_semantic_recall": 0.3132803632236095
+      },
+      "tolerance": {
+        "0": {
+          "semantic_to_adablock_precision": 0.2917547568710359,
+          "adablock_to_semantic_recall": 0.3132803632236095
+        },
+        "1": {
+          "semantic_to_adablock_precision": 0.313953488372093,
+          "adablock_to_semantic_recall": 0.337116912599319
+        },
+        "2": {
+          "semantic_to_adablock_precision": 0.346723044397463,
+          "adablock_to_semantic_recall": 0.3757094211123723
+        },
+        "4": {
+          "semantic_to_adablock_precision": 0.4154334038054968,
+          "adablock_to_semantic_recall": 0.4438138479001135
+        },
+        "8": {
+          "semantic_to_adablock_precision": 0.8393234672304439,
+          "adablock_to_semantic_recall": 0.9046538024971623
+        }
+      },
+      "nearest_distance": {
+        "semantic_to_adablock_mean": 6.0813953488372094,
+        "semantic_to_adablock_median": 8.0,
+        "semantic_to_adablock_p90": 13.0,
+        "adablock_to_semantic_mean": 5.127128263337117,
+        "adablock_to_semantic_median": 7.0,
+        "adablock_to_semantic_p90": 8.0
+      },
+      "per_sample": [
+        {
+          "sample_key": "sample-0",
+          "semantic_sample_id": "sample-0",
+          "adablock_sample_id": "sample-0",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-1",
+          "semantic_sample_id": "sample-1",
+          "adablock_sample_id": "sample-1",
+          "semantic_boundary_count": 18,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 4,
+          "exact_jaccard": 0.13333333333333333,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            268,
+            292,
+            332,
+            356,
+            371,
+            395,
+            435,
+            459,
+            499,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            168,
+            200,
+            232,
+            264,
+            296,
+            328,
+            360,
+            392,
+            424,
+            456,
+            488
+          ],
+          "nearest_semantic_to_adablock_mean": 5.722222222222222,
+          "nearest_adablock_to_semantic_mean": 4.75,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.2222222222222222,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.2222222222222222,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2222222222222222,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5555555555555556,
+              "adablock_to_semantic_recall": 0.625
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.7777777777777778,
+              "adablock_to_semantic_recall": 0.875
+            }
+          }
+        },
+        {
+          "sample_key": "sample-10",
+          "semantic_sample_id": "sample-10",
+          "adablock_sample_id": "sample-10",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-11",
+          "semantic_sample_id": "sample-11",
+          "adablock_sample_id": "sample-11",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-12",
+          "semantic_sample_id": "sample-12",
+          "adablock_sample_id": "sample-12",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.03225806451612903,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            99,
+            131,
+            163,
+            195,
+            227,
+            259,
+            291,
+            323,
+            355,
+            387,
+            419,
+            451,
+            483
+          ],
+          "nearest_semantic_to_adablock_mean": 5.125,
+          "nearest_adablock_to_semantic_mean": 4.3125,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-13",
+          "semantic_sample_id": "sample-13",
+          "adablock_sample_id": "sample-13",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 17,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.06451612903225806,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            162,
+            194,
+            226,
+            258,
+            290,
+            322,
+            354,
+            386,
+            389,
+            421,
+            453,
+            485
+          ],
+          "nearest_semantic_to_adablock_mean": 4.875,
+          "nearest_adablock_to_semantic_mean": 4.235294117647059,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.125,
+              "adablock_to_semantic_recall": 0.11764705882352941
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.125,
+              "adablock_to_semantic_recall": 0.11764705882352941
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.375,
+              "adablock_to_semantic_recall": 0.35294117647058826
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.47058823529411764
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-14",
+          "semantic_sample_id": "sample-14",
+          "adablock_sample_id": "sample-14",
+          "semantic_boundary_count": 18,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.06451612903225806,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            137,
+            161,
+            201,
+            225,
+            265,
+            266,
+            279,
+            303,
+            343,
+            367,
+            407,
+            431,
+            471,
+            495
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 8.38888888888889,
+          "nearest_adablock_to_semantic_mean": 8.2,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.1111111111111111,
+              "adablock_to_semantic_recall": 0.13333333333333333
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.2222222222222222,
+              "adablock_to_semantic_recall": 0.26666666666666666
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2222222222222222,
+              "adablock_to_semantic_recall": 0.26666666666666666
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.2222222222222222,
+              "adablock_to_semantic_recall": 0.26666666666666666
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.4
+            }
+          }
+        },
+        {
+          "sample_key": "sample-15",
+          "semantic_sample_id": "sample-15",
+          "adablock_sample_id": "sample-15",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-16",
+          "semantic_sample_id": "sample-16",
+          "adablock_sample_id": "sample-16",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-17",
+          "semantic_sample_id": "sample-17",
+          "adablock_sample_id": "sample-17",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-18",
+          "semantic_sample_id": "sample-18",
+          "adablock_sample_id": "sample-18",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-19",
+          "semantic_sample_id": "sample-19",
+          "adablock_sample_id": "sample-19",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-2",
+          "semantic_sample_id": "sample-2",
+          "adablock_sample_id": "sample-2",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 20,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            40,
+            41,
+            81,
+            105,
+            145,
+            169,
+            209,
+            233,
+            273,
+            297,
+            337,
+            361,
+            401,
+            425,
+            465,
+            489
+          ],
+          "adablock_offsets": [
+            32,
+            36,
+            38,
+            44,
+            76,
+            108,
+            140,
+            172,
+            204,
+            236,
+            268,
+            300,
+            308,
+            340,
+            372,
+            404,
+            410,
+            442,
+            474,
+            506
+          ],
+          "nearest_semantic_to_adablock_mean": 5.8125,
+          "nearest_adablock_to_semantic_mean": 6.45,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.05
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.45
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.7
+            }
+          }
+        },
+        {
+          "sample_key": "sample-20",
+          "semantic_sample_id": "sample-20",
+          "adablock_sample_id": "sample-20",
+          "semantic_boundary_count": 20,
+          "adablock_boundary_count": 17,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.05714285714285714,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            146,
+            170,
+            195,
+            224,
+            240,
+            264,
+            285,
+            309,
+            334,
+            358,
+            379,
+            403,
+            443,
+            467,
+            507,
+            508
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            98,
+            102,
+            134,
+            166,
+            198,
+            230,
+            262,
+            294,
+            326,
+            358,
+            390,
+            422,
+            454,
+            486
+          ],
+          "nearest_semantic_to_adablock_mean": 8.8,
+          "nearest_adablock_to_semantic_mean": 7.176470588235294,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.1,
+              "adablock_to_semantic_recall": 0.11764705882352941
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.1,
+              "adablock_to_semantic_recall": 0.11764705882352941
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.23529411764705882
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.3,
+              "adablock_to_semantic_recall": 0.35294117647058826
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.7058823529411765
+            }
+          }
+        },
+        {
+          "sample_key": "sample-21",
+          "semantic_sample_id": "sample-21",
+          "adablock_sample_id": "sample-21",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-22",
+          "semantic_sample_id": "sample-22",
+          "adablock_sample_id": "sample-22",
+          "semantic_boundary_count": 18,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.25925925925925924,
+          "semantic_offsets": [
+            40,
+            41,
+            53,
+            77,
+            117,
+            141,
+            181,
+            205,
+            245,
+            269,
+            309,
+            333,
+            373,
+            397,
+            437,
+            461,
+            501,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            45,
+            77,
+            109,
+            141,
+            173,
+            205,
+            237,
+            269,
+            301,
+            333,
+            365,
+            397,
+            429,
+            461,
+            493
+          ],
+          "nearest_semantic_to_adablock_mean": 4.666666666666667,
+          "nearest_adablock_to_semantic_mean": 4.25,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.3888888888888889,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.3888888888888889,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.3888888888888889,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4444444444444444,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9444444444444444,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-23",
+          "semantic_sample_id": "sample-23",
+          "adablock_sample_id": "sample-23",
+          "semantic_boundary_count": 22,
+          "adablock_boundary_count": 19,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.05128205128205128,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            137,
+            161,
+            201,
+            225,
+            265,
+            287,
+            303,
+            327,
+            344,
+            368,
+            385,
+            409,
+            427,
+            451,
+            491,
+            492,
+            502,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            258,
+            290,
+            297,
+            329,
+            361,
+            375,
+            407,
+            417,
+            449,
+            481,
+            489
+          ],
+          "nearest_semantic_to_adablock_mean": 6.045454545454546,
+          "nearest_adablock_to_semantic_mean": 4.842105263157895,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.09090909090909091,
+              "adablock_to_semantic_recall": 0.10526315789473684
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.18181818181818182,
+              "adablock_to_semantic_recall": 0.21052631578947367
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.36363636363636365,
+              "adablock_to_semantic_recall": 0.42105263157894735
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.45454545454545453,
+              "adablock_to_semantic_recall": 0.47368421052631576
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6818181818181818,
+              "adablock_to_semantic_recall": 0.8421052631578947
+            }
+          }
+        },
+        {
+          "sample_key": "sample-24",
+          "semantic_sample_id": "sample-24",
+          "adablock_sample_id": "sample-24",
+          "semantic_boundary_count": 18,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 5,
+          "exact_jaccard": 0.1724137931034483,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            425,
+            465,
+            466,
+            475,
+            499
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            356,
+            388,
+            420,
+            452,
+            484
+          ],
+          "nearest_semantic_to_adablock_mean": 6.0,
+          "nearest_adablock_to_semantic_mean": 5.125,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.2777777777777778,
+              "adablock_to_semantic_recall": 0.3125
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.2777777777777778,
+              "adablock_to_semantic_recall": 0.3125
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2777777777777778,
+              "adablock_to_semantic_recall": 0.3125
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4444444444444444,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.7777777777777778,
+              "adablock_to_semantic_recall": 0.875
+            }
+          }
+        },
+        {
+          "sample_key": "sample-25",
+          "semantic_sample_id": "sample-25",
+          "adablock_sample_id": "sample-25",
+          "semantic_boundary_count": 18,
+          "adablock_boundary_count": 18,
+          "exact_intersection_count": 3,
+          "exact_jaccard": 0.09090909090909091,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            105,
+            119,
+            143,
+            178,
+            215,
+            231,
+            255,
+            289,
+            332,
+            348,
+            385,
+            401,
+            443,
+            459,
+            483
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            111,
+            143,
+            170,
+            202,
+            223,
+            255,
+            281,
+            313,
+            334,
+            366,
+            393,
+            425,
+            446,
+            478,
+            510
+          ],
+          "nearest_semantic_to_adablock_mean": 6.333333333333333,
+          "nearest_adablock_to_semantic_mean": 8.833333333333334,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.16666666666666666,
+              "adablock_to_semantic_recall": 0.16666666666666666
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.16666666666666666,
+              "adablock_to_semantic_recall": 0.16666666666666666
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2222222222222222,
+              "adablock_to_semantic_recall": 0.2222222222222222
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.2777777777777778,
+              "adablock_to_semantic_recall": 0.2777777777777778
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.8888888888888888,
+              "adablock_to_semantic_recall": 0.7222222222222222
+            }
+          }
+        },
+        {
+          "sample_key": "sample-26",
+          "semantic_sample_id": "sample-26",
+          "adablock_sample_id": "sample-26",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-27",
+          "semantic_sample_id": "sample-27",
+          "adablock_sample_id": "sample-27",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-28",
+          "semantic_sample_id": "sample-28",
+          "adablock_sample_id": "sample-28",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-29",
+          "semantic_sample_id": "sample-29",
+          "adablock_sample_id": "sample-29",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-3",
+          "semantic_sample_id": "sample-3",
+          "adablock_sample_id": "sample-3",
+          "semantic_boundary_count": 18,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            40,
+            41,
+            54,
+            78,
+            118,
+            142,
+            182,
+            206,
+            246,
+            270,
+            310,
+            334,
+            374,
+            398,
+            438,
+            462,
+            502,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            33,
+            65,
+            97,
+            129,
+            161,
+            193,
+            225,
+            257,
+            289,
+            321,
+            353,
+            385,
+            417,
+            449,
+            481
+          ],
+          "nearest_semantic_to_adablock_mean": 12.61111111111111,
+          "nearest_adablock_to_semantic_mean": 14.0625,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.1111111111111111,
+              "adablock_to_semantic_recall": 0.125
+            }
+          }
+        },
+        {
+          "sample_key": "sample-30",
+          "semantic_sample_id": "sample-30",
+          "adablock_sample_id": "sample-30",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.28,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            449,
+            481
+          ],
+          "nearest_semantic_to_adablock_mean": 5.375,
+          "nearest_adablock_to_semantic_mean": 4.0,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-31",
+          "semantic_sample_id": "sample-31",
+          "adablock_sample_id": "sample-31",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-32",
+          "semantic_sample_id": "sample-32",
+          "adablock_sample_id": "sample-32",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-33",
+          "semantic_sample_id": "sample-33",
+          "adablock_sample_id": "sample-33",
+          "semantic_boundary_count": 24,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            105,
+            145,
+            169,
+            209,
+            233,
+            246,
+            247,
+            263,
+            264,
+            280,
+            281,
+            297,
+            299,
+            315,
+            339,
+            379,
+            403,
+            443,
+            467,
+            507,
+            508
+          ],
+          "adablock_offsets": [
+            32,
+            33,
+            65,
+            97,
+            129,
+            161,
+            193,
+            225,
+            257,
+            289,
+            321,
+            353,
+            385,
+            417,
+            449,
+            481
+          ],
+          "nearest_semantic_to_adablock_mean": 10.541666666666666,
+          "nearest_adablock_to_semantic_mean": 9.0625,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.041666666666666664,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.041666666666666664,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.041666666666666664,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.5416666666666666,
+              "adablock_to_semantic_recall": 0.6875
+            }
+          }
+        },
+        {
+          "sample_key": "sample-34",
+          "semantic_sample_id": "sample-34",
+          "adablock_sample_id": "sample-34",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-35",
+          "semantic_sample_id": "sample-35",
+          "adablock_sample_id": "sample-35",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-36",
+          "semantic_sample_id": "sample-36",
+          "adablock_sample_id": "sample-36",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 2,
+          "exact_jaccard": 0.06666666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            161,
+            193,
+            225,
+            257,
+            289,
+            321,
+            353,
+            385,
+            417,
+            449,
+            481
+          ],
+          "nearest_semantic_to_adablock_mean": 5.375,
+          "nearest_adablock_to_semantic_mean": 4.4375,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.125,
+              "adablock_to_semantic_recall": 0.125
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4375
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-37",
+          "semantic_sample_id": "sample-37",
+          "adablock_sample_id": "sample-37",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 3,
+          "exact_jaccard": 0.10344827586206896,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            228,
+            260,
+            292,
+            324,
+            356,
+            388,
+            420,
+            452,
+            484
+          ],
+          "nearest_semantic_to_adablock_mean": 5.0,
+          "nearest_adablock_to_semantic_mean": 4.25,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.1875,
+              "adablock_to_semantic_recall": 0.1875
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.1875,
+              "adablock_to_semantic_recall": 0.1875
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.1875,
+              "adablock_to_semantic_recall": 0.1875
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.75,
+              "adablock_to_semantic_recall": 0.75
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-38",
+          "semantic_sample_id": "sample-38",
+          "adablock_sample_id": "sample-38",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-39",
+          "semantic_sample_id": "sample-39",
+          "adablock_sample_id": "sample-39",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-4",
+          "semantic_sample_id": "sample-4",
+          "adablock_sample_id": "sample-4",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-40",
+          "semantic_sample_id": "sample-40",
+          "adablock_sample_id": "sample-40",
+          "semantic_boundary_count": 18,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 3,
+          "exact_jaccard": 0.1,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            203,
+            227,
+            267,
+            291,
+            331,
+            355,
+            395,
+            396,
+            408,
+            432,
+            472,
+            496
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 7.611111111111111,
+          "nearest_adablock_to_semantic_mean": 6.533333333333333,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.16666666666666666,
+              "adablock_to_semantic_recall": 0.2
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.16666666666666666,
+              "adablock_to_semantic_recall": 0.2
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.16666666666666666,
+              "adablock_to_semantic_recall": 0.2
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.3333333333333333,
+              "adablock_to_semantic_recall": 0.4
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6111111111111112,
+              "adablock_to_semantic_recall": 0.7333333333333333
+            }
+          }
+        },
+        {
+          "sample_key": "sample-41",
+          "semantic_sample_id": "sample-41",
+          "adablock_sample_id": "sample-41",
+          "semantic_boundary_count": 28,
+          "adablock_boundary_count": 24,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            40,
+            41,
+            51,
+            52,
+            72,
+            78,
+            94,
+            95,
+            135,
+            140,
+            156,
+            161,
+            177,
+            178,
+            190,
+            194,
+            210,
+            211,
+            220,
+            244,
+            284,
+            308,
+            348,
+            372,
+            412,
+            436,
+            476,
+            500
+          ],
+          "adablock_offsets": [
+            32,
+            43,
+            55,
+            65,
+            76,
+            88,
+            99,
+            109,
+            131,
+            143,
+            153,
+            164,
+            175,
+            186,
+            218,
+            250,
+            282,
+            314,
+            346,
+            378,
+            410,
+            442,
+            474,
+            506
+          ],
+          "nearest_semantic_to_adablock_mean": 4.0,
+          "nearest_adablock_to_semantic_mean": 4.375,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.2857142857142857,
+              "adablock_to_semantic_recall": 0.3333333333333333
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.6785714285714286,
+              "adablock_to_semantic_recall": 0.625
+            },
+            "8": {
+              "semantic_to_adablock_precision": 1.0,
+              "adablock_to_semantic_recall": 0.9583333333333334
+            }
+          }
+        },
+        {
+          "sample_key": "sample-42",
+          "semantic_sample_id": "sample-42",
+          "adablock_sample_id": "sample-42",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-43",
+          "semantic_sample_id": "sample-43",
+          "adablock_sample_id": "sample-43",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.03225806451612903,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            105,
+            145,
+            169,
+            209,
+            233,
+            273,
+            297,
+            337,
+            361,
+            401,
+            425,
+            465,
+            489
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            97,
+            129,
+            161,
+            193,
+            225,
+            257,
+            289,
+            321,
+            353,
+            385,
+            417,
+            449,
+            481
+          ],
+          "nearest_semantic_to_adablock_mean": 10.4375,
+          "nearest_adablock_to_semantic_mean": 10.4375,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.0625
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.625,
+              "adablock_to_semantic_recall": 0.625
+            }
+          }
+        },
+        {
+          "sample_key": "sample-44",
+          "semantic_sample_id": "sample-44",
+          "adablock_sample_id": "sample-44",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-45",
+          "semantic_sample_id": "sample-45",
+          "adablock_sample_id": "sample-45",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-46",
+          "semantic_sample_id": "sample-46",
+          "adablock_sample_id": "sample-46",
+          "semantic_boundary_count": 24,
+          "adablock_boundary_count": 20,
+          "exact_intersection_count": 0,
+          "exact_jaccard": 0.0,
+          "semantic_offsets": [
+            40,
+            41,
+            55,
+            56,
+            66,
+            67,
+            98,
+            99,
+            111,
+            112,
+            123,
+            129,
+            145,
+            169,
+            209,
+            233,
+            273,
+            297,
+            337,
+            361,
+            401,
+            425,
+            465,
+            489
+          ],
+          "adablock_offsets": [
+            32,
+            49,
+            60,
+            70,
+            93,
+            103,
+            135,
+            147,
+            158,
+            180,
+            212,
+            244,
+            276,
+            308,
+            340,
+            372,
+            404,
+            436,
+            468,
+            500
+          ],
+          "nearest_semantic_to_adablock_mean": 6.625,
+          "nearest_adablock_to_semantic_mean": 6.5,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.0,
+              "adablock_to_semantic_recall": 0.0
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.041666666666666664,
+              "adablock_to_semantic_recall": 0.05
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4166666666666667,
+              "adablock_to_semantic_recall": 0.45
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.6666666666666666,
+              "adablock_to_semantic_recall": 0.65
+            }
+          }
+        },
+        {
+          "sample_key": "sample-47",
+          "semantic_sample_id": "sample-47",
+          "adablock_sample_id": "sample-47",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 3,
+          "exact_jaccard": 0.10344827586206896,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            198,
+            230,
+            262,
+            294,
+            326,
+            358,
+            390,
+            422,
+            454,
+            486
+          ],
+          "nearest_semantic_to_adablock_mean": 4.75,
+          "nearest_adablock_to_semantic_mean": 4.0,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.1875,
+              "adablock_to_semantic_recall": 0.1875
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.1875,
+              "adablock_to_semantic_recall": 0.1875
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.5,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-48",
+          "semantic_sample_id": "sample-48",
+          "adablock_sample_id": "sample-48",
+          "semantic_boundary_count": 30,
+          "adablock_boundary_count": 26,
+          "exact_intersection_count": 4,
+          "exact_jaccard": 0.07692307692307693,
+          "semantic_offsets": [
+            40,
+            41,
+            54,
+            55,
+            95,
+            96,
+            110,
+            111,
+            132,
+            133,
+            142,
+            166,
+            185,
+            186,
+            197,
+            221,
+            261,
+            262,
+            271,
+            295,
+            314,
+            341,
+            357,
+            384,
+            400,
+            427,
+            443,
+            467,
+            507,
+            508
+          ],
+          "adablock_offsets": [
+            32,
+            43,
+            54,
+            63,
+            71,
+            79,
+            111,
+            115,
+            147,
+            151,
+            183,
+            215,
+            247,
+            279,
+            311,
+            317,
+            325,
+            357,
+            359,
+            391,
+            393,
+            425,
+            427,
+            459,
+            461,
+            493
+          ],
+          "nearest_semantic_to_adablock_mean": 8.3,
+          "nearest_adablock_to_semantic_mean": 6.1923076923076925,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.13333333333333333,
+              "adablock_to_semantic_recall": 0.15384615384615385
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.2,
+              "adablock_to_semantic_recall": 0.15384615384615385
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.26666666666666666,
+              "adablock_to_semantic_recall": 0.3076923076923077
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.36666666666666664,
+              "adablock_to_semantic_recall": 0.4230769230769231
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.5666666666666667,
+              "adablock_to_semantic_recall": 0.7692307692307693
+            }
+          }
+        },
+        {
+          "sample_key": "sample-49",
+          "semantic_sample_id": "sample-49",
+          "adablock_sample_id": "sample-49",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 3,
+          "exact_jaccard": 0.10344827586206896,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            467,
+            491
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            193,
+            225,
+            257,
+            289,
+            321,
+            353,
+            385,
+            417,
+            449,
+            481
+          ],
+          "nearest_semantic_to_adablock_mean": 5.0,
+          "nearest_adablock_to_semantic_mean": 4.1875,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.1875,
+              "adablock_to_semantic_recall": 0.1875
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.875,
+              "adablock_to_semantic_recall": 0.9375
+            }
+          }
+        },
+        {
+          "sample_key": "sample-5",
+          "semantic_sample_id": "sample-5",
+          "adablock_sample_id": "sample-5",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-50",
+          "semantic_sample_id": "sample-50",
+          "adablock_sample_id": "sample-50",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-51",
+          "semantic_sample_id": "sample-51",
+          "adablock_sample_id": "sample-51",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-52",
+          "semantic_sample_id": "sample-52",
+          "adablock_sample_id": "sample-52",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 16,
+          "exact_intersection_count": 4,
+          "exact_jaccard": 0.14285714285714285,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            258,
+            290,
+            322,
+            354,
+            386,
+            418,
+            450,
+            482
+          ],
+          "nearest_semantic_to_adablock_mean": 5.25,
+          "nearest_adablock_to_semantic_mean": 4.0,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.25,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.25,
+              "adablock_to_semantic_recall": 0.25
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.5
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-53",
+          "semantic_sample_id": "sample-53",
+          "adablock_sample_id": "sample-53",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-54",
+          "semantic_sample_id": "sample-54",
+          "adablock_sample_id": "sample-54",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 17,
+          "exact_intersection_count": 1,
+          "exact_jaccard": 0.03125,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            395,
+            419,
+            459,
+            483
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            73,
+            105,
+            137,
+            169,
+            201,
+            233,
+            265,
+            297,
+            329,
+            361,
+            370,
+            402,
+            434,
+            466,
+            498
+          ],
+          "nearest_semantic_to_adablock_mean": 6.6875,
+          "nearest_adablock_to_semantic_mean": 6.588235294117647,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.0625,
+              "adablock_to_semantic_recall": 0.058823529411764705
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.375,
+              "adablock_to_semantic_recall": 0.35294117647058826
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.375,
+              "adablock_to_semantic_recall": 0.35294117647058826
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.375,
+              "adablock_to_semantic_recall": 0.35294117647058826
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.5625,
+              "adablock_to_semantic_recall": 0.5294117647058824
+            }
+          }
+        },
+        {
+          "sample_key": "sample-6",
+          "semantic_sample_id": "sample-6",
+          "adablock_sample_id": "sample-6",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-7",
+          "semantic_sample_id": "sample-7",
+          "adablock_sample_id": "sample-7",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-8",
+          "semantic_sample_id": "sample-8",
+          "adablock_sample_id": "sample-8",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        },
+        {
+          "sample_key": "sample-9",
+          "semantic_sample_id": "sample-9",
+          "adablock_sample_id": "sample-9",
+          "semantic_boundary_count": 16,
+          "adablock_boundary_count": 15,
+          "exact_intersection_count": 7,
+          "exact_jaccard": 0.2916666666666667,
+          "semantic_offsets": [
+            40,
+            64,
+            104,
+            128,
+            168,
+            192,
+            232,
+            256,
+            296,
+            320,
+            360,
+            384,
+            424,
+            448,
+            488,
+            504
+          ],
+          "adablock_offsets": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224,
+            256,
+            288,
+            320,
+            352,
+            384,
+            416,
+            448,
+            480
+          ],
+          "nearest_semantic_to_adablock_mean": 5.5,
+          "nearest_adablock_to_semantic_mean": 4.266666666666667,
+          "tolerance": {
+            "0": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "1": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "2": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "4": {
+              "semantic_to_adablock_precision": 0.4375,
+              "adablock_to_semantic_recall": 0.4666666666666667
+            },
+            "8": {
+              "semantic_to_adablock_precision": 0.9375,
+              "adablock_to_semantic_recall": 1.0
+            }
+          }
+        }
+      ],
+      "semantic_trace_path": "/home/ubuntu/.config/superpowers/worktrees/AdaBlock-dLLM-main/semantic-boundary-indep-20260409/llada/experiments/semantic_boundary_indep/20260518_ifeval_semantic_degradation_curve/traces/jitter8",
+      "adablock_trace_path": "/home/ubuntu/.config/superpowers/worktrees/AdaBlock-dLLM-main/semantic-boundary-indep-20260409/llada/experiments/semantic_boundary_indep/20260516_boundary_overlap_tenth_corresponding/traces/ifeval/gum_head_tenth",
+      "match_key": "sample_id",
+      "semantic_source": "all",
+      "adablock_source": "all",
+      "include_terminal": false
+    }
+  ],
+  "compact_task_summaries": [
+    {
+      "task_name": "ifeval_jitter8_vs_clean",
+      "shared_sample_count": 55,
+      "semantic_boundary_count": 946,
+      "adablock_boundary_count": 881,
+      "semantic_to_adablock_count_ratio": 1.0737797956867197,
+      "exact_jaccard": 0.17794970986460348,
+      "exact_semantic_to_adablock_precision": 0.2917547568710359,
+      "exact_adablock_to_semantic_recall": 0.3132803632236095,
+      "nearest_semantic_to_adablock_mean": 6.0813953488372094,
+      "nearest_adablock_to_semantic_mean": 5.127128263337117
+    }
+  ]
+}
