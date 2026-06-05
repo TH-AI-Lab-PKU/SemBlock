@@ -2,12 +2,12 @@
 set -euo pipefail
 
 if [[ $# -ne 2 ]]; then
-  echo "Usage: $0 <gpu> <block_length>"
+  echo "Usage: $0 <npu> <block_length>"
   echo "Supported block_length: 16 or 64"
   exit 1
 fi
 
-GPU="$1"
+NPU="$1"
 BLOCK_LENGTH="$2"
 
 case "${BLOCK_LENGTH}" in
@@ -24,7 +24,7 @@ case "${BLOCK_LENGTH}" in
 esac
 
 exec bash /home/nvme01/workspace/AdaBlock-dLLM-main/llada/run_code_eval_config.sh \
-  "${GPU}" \
+  "${NPU}" \
   humaneval \
   semantic_hybrid \
   "${BLOCK_LENGTH}" \

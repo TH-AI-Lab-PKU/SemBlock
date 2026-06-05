@@ -14,9 +14,7 @@ SOURCE_ADABLOCK_TRACE="${SOURCE_ROOT}/traces/ifeval/adablock_tenth"
 SOURCE_SEMANTIC_TRACE="${SOURCE_ROOT}/traces/ifeval/gum_head_tenth"
 
 LIMIT="${LIMIT:-55}"
-ALLOWED_GPUS="${ALLOWED_GPUS:-2,3,4,5,6,7}"
-MIN_FREE_MB="${MIN_FREE_MB:-65000}"
-MAX_UTIL="${MAX_UTIL:-20}"
+ALLOWED_NPUS="${ALLOWED_NPUS:-2,3,4,5,6,7}"
 SLEEP_SECONDS="${SLEEP_SECONDS:-180}"
 
 export HF_HOME="${ROOT_DIR}/cache/hf"
@@ -26,7 +24,6 @@ export HF_ALLOW_CODE_EVAL=1
 export NLTK_DATA="/home/nvme04/unknow/nltk_data"
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONNOUSERSITE=1
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 mkdir -p "${ROOT_DIR}/logs" "${ROOT_DIR}/results" "${ROOT_DIR}/resume" "${ROOT_DIR}/traces" "${ROOT_DIR}/overlap" "${HF_HOME}"
 
@@ -38,38 +35,12 @@ require_path() {
   fi
 }
 
-wait_for_gpu() {
-  while true; do
-    local gpu
-    gpu="$(
-      nvidia-smi --query-gpu=index,memory.free,utilization.gpu --format=csv,noheader,nounits \
-        | awk -F, -v allowed="${ALLOWED_GPUS}" -v min_free="${MIN_FREE_MB}" -v max_util="${MAX_UTIL}" '
-            BEGIN {
-              split(allowed, ids, ",");
-              for (i in ids) ok[ids[i] + 0] = 1;
-            }
-            {
-              gsub(/ /, "", $1);
-              gsub(/ /, "", $2);
-              gsub(/ /, "", $3);
-              idx = $1 + 0;
-              free = $2 + 0;
-              util = $3 + 0;
-              if (ok[idx] && free >= min_free && util <= max_util) {
-                print idx;
-                exit;
-              }
-            }'
-    )"
-    if [[ -n "${gpu}" ]]; then
-      echo "${gpu}"
-      return 0
-    fi
-    date >&2
-    nvidia-smi --query-gpu=index,memory.used,memory.free,utilization.gpu --format=csv,noheader,nounits >&2
-    echo "No allowed GPU (${ALLOWED_GPUS}) with >= ${MIN_FREE_MB} MB free and <= ${MAX_UTIL}% util; sleeping ${SLEEP_SECONDS}s." >&2
-    sleep "${SLEEP_SECONDS}"
-  done
+wait_for_npu() {
+  local npu="${ALLOWED_NPUS%%,*}"
+  if command -v npu-smi >/dev/null 2>&1; then
+    npu-smi info -i "${npu}" >&2 || npu-smi info >&2 || true
+  fi
+  echo "${npu}"
 }
 
 latest_result() {
@@ -92,12 +63,12 @@ run_eval() {
   fi
 
   mkdir -p "${trace_dir}" "${save_dir}" "${result_dir}"
-  local gpu
-  gpu="$(wait_for_gpu)"
-  echo "[run] ${name} (${strategy}) on GPU ${gpu}, limit=${LIMIT}"
+  local npu
+  npu="$(wait_for_npu)"
+  echo "[run] ${name} (${strategy}) on NPU ${npu}, limit=${LIMIT}"
   (
     cd "${OLD_LLADA}"
-    CUDA_VISIBLE_DEVICES="${gpu}" "${PYTHON_BIN}" "${OLD_LLADA}/eval_llada_adablock.py" \
+    ASCEND_RT_VISIBLE_DEVICES="${npu}" NPU_VISIBLE_DEVICES="${npu}" "${PYTHON_BIN}" "${OLD_LLADA}/eval_llada_adablock.py" \
       --model llada_dist \
       --model_args "${model_args},trace_dir=${trace_dir},save_dir=${save_dir}" \
       --tasks ifeval_local \

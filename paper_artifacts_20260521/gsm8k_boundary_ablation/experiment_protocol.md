@@ -148,7 +148,7 @@ llada/experiments/semantic_boundary_indep/20260519_gsm8k_sota_boundary_ablation/
 - 运行 `delimiter_only_adablock`。
 - 运行 `math_head_only`。
 - 每个 variant 完成后调用 summarizer 汇总结果。
-- 默认只在 `ALLOWED_GPUS=0,1` 中选择 GPU，并避免当时不允许使用的 GPU 2/3/4/5。
+- 默认只在 `ALLOWED_NPUS=0,1` 中选择 NPU，并避免当时不允许使用的 NPU 2/3/4/5。
 
 汇总脚本：
 

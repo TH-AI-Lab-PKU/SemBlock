@@ -15,6 +15,11 @@ from tqdm import tqdm
 from transformers import AutoTokenizer
 
 try:
+    from accelerator_utils import accelerator_dtype, default_device
+except ImportError:  # pragma: no cover
+    from .accelerator_utils import accelerator_dtype, default_device
+
+try:
     from model.modeling_llada import LLaDAModelLM
 except ImportError:  # pragma: no cover - allows lightweight unit imports without the model package.
     LLaDAModelLM = None
@@ -970,7 +975,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     include_terminal_boundary = not args.exclude_terminal_boundary
 
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device(default_device())
 
     tokenizer = AutoTokenizer.from_pretrained(args.model_path, trust_remote_code=True)
     if tokenizer.pad_token_id is None:
@@ -983,7 +988,7 @@ def main() -> None:
     llada_model = LLaDAModelLM.from_pretrained(
         args.model_path,
         trust_remote_code=True,
-        torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+        torch_dtype=accelerator_dtype(device),
     ).to(device)
     llada_model.eval()
     for param in llada_model.parameters():

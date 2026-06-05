@@ -43,7 +43,6 @@ try:
 except:
     FLEX_ATTN_AVAILABLE = False
 import torch
-import torch.backends.cuda
 import torch.nn as nn
 import torch.nn.functional as F
 from torch import einsum
@@ -62,6 +61,11 @@ from .configuration_llada import (
     ModelConfig,
     ActivationCheckpointingStrategy,
 )
+
+try:
+    from accelerator_utils import autocast_dtype, default_device, is_npu_device
+except ImportError:  # pragma: no cover
+    from ..accelerator_utils import autocast_dtype, default_device, is_npu_device
 
 if sys.version_info.minor > 8:
     from collections.abc import MutableMapping
@@ -218,7 +222,7 @@ def _non_meta_init_device(config: ModelConfig) -> torch.device:
     if config.init_device is not None and config.init_device != "meta":
         return torch.device(config.init_device)
     else:
-        return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        return torch.device(default_device())
 
 
 class Dropout(nn.Dropout):
@@ -273,11 +277,10 @@ class LayerNormBase(nn.Module):
             raise NotImplementedError(f"Unknown LayerNorm type: '{config.layer_norm_type}'")
 
     def _cast_if_autocast_enabled(self, tensor: torch.Tensor, dtype: Optional[torch.dtype] = None) -> torch.Tensor:
-        # NOTE: `is_autocast_enabled()` only checks for CUDA autocast, so we use the separate function
-        # `is_autocast_cpu_enabled()` for CPU autocast.
+        # NPU autocast is checked with the generic autocast flag after torch_npu registration.
         # See https://github.com/pytorch/pytorch/issues/110966.
-        if tensor.device.type == "cuda" and torch.is_autocast_enabled():
-            return tensor.to(dtype=dtype if dtype is not None else torch.get_autocast_gpu_dtype())
+        if is_npu_device(tensor.device) and torch.is_autocast_enabled():
+            return tensor.to(dtype=dtype if dtype is not None else autocast_dtype())
         elif tensor.device.type == "cpu" and torch.is_autocast_cpu_enabled():
             return tensor.to(dtype=dtype if dtype is not None else torch.get_autocast_cpu_dtype())
         else:
@@ -640,11 +643,10 @@ class LLaDABlock(nn.Module):
     @classmethod
     def _cast_attn_bias(cls, bias: torch.Tensor, input_dtype: torch.dtype) -> torch.Tensor:
         target_dtype = input_dtype
-        # NOTE: `is_autocast_enabled()` only checks for CUDA autocast, so we use the separate function
-        # `is_autocast_cpu_enabled()` for CPU autocast.
+        # NPU autocast is checked with the generic autocast flag after torch_npu registration.
         # See https://github.com/pytorch/pytorch/issues/110966.
-        if bias.device.type == "cuda" and torch.is_autocast_enabled():
-            target_dtype = torch.get_autocast_gpu_dtype()
+        if is_npu_device(bias.device) and torch.is_autocast_enabled():
+            target_dtype = autocast_dtype()
         elif bias.device.type == "cpu" and torch.is_autocast_cpu_enabled():
             target_dtype = torch.get_autocast_cpu_dtype()
         if bias.dtype != target_dtype:
@@ -1222,9 +1224,6 @@ class LLaDAModel(nn.Module):
         ):
             raise Exception("n layers must be divisible by block group size")
 
-        torch.backends.cuda.enable_flash_sdp(True)
-        torch.backends.cuda.enable_mem_efficient_sdp(False)  # this is super slow so make sure torch won't use it
-
         self.transformer = nn.ModuleDict(
             dict(
                 wte=nn.Embedding(
@@ -1557,7 +1556,7 @@ class LLaDAModelLM(PreTrainedModel):
 
         if not model:
             model_config = create_model_config_from_pretrained_config(config)
-            # Initialize model (always on CPU to start with so we don't run out of GPU memory).
+            # Initialize model on CPU first to avoid exhausting accelerator memory.
             model_config.init_device = "cpu"
             self.model = LLaDAModel(model_config, init_params=init_params)
         else:

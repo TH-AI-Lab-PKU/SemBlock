@@ -16,6 +16,7 @@ from datasets import load_dataset
 from tqdm import tqdm
 from transformers import AutoConfig, AutoTokenizer
 
+from accelerator_utils import accelerator_dtype, default_device, is_npu_device, manual_seed_all
 from eval_prompting import build_generation_prompt, should_use_raw_completion_decode, truncate_generated_text
 from generate_oracle_blocks import (
     generate_oracle_blocks,
@@ -56,8 +57,7 @@ def set_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
+    manual_seed_all(seed)
 
 
 def timestamp_slug() -> str:
@@ -65,10 +65,10 @@ def timestamp_slug() -> str:
 
 
 def load_model_and_tokenizer(model_path: str, device: str):
-    dtype = torch.bfloat16 if device.startswith("cuda") else torch.float32
+    dtype = accelerator_dtype(device)
     config = AutoConfig.from_pretrained(model_path)
     if hasattr(config, "flash_attention"):
-        config.flash_attention = bool(device.startswith("cuda"))
+        config.flash_attention = bool(is_npu_device(device))
     model = LLaDAModelLM.from_pretrained(
         model_path,
         trust_remote_code=True,
@@ -874,7 +874,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--math-fewshot", type=int, default=4)
     parser.add_argument("--math-train-path", type=Path, default=DEFAULT_MATH_TRAIN_PATH)
     parser.add_argument("--math-test-path", type=Path, default=DEFAULT_MATH_TEST_PATH)
-    parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--device", type=str, default=default_device())
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--steps", type=int, default=16)
     parser.add_argument("--gen-length", type=int, default=512)

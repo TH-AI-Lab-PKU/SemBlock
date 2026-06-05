@@ -358,7 +358,7 @@ class ModelConfig():
 
     init_device: Optional[str] = None
     """
-    The torch device to use when initializing the model parameters, e.g. "cpu", "cuda:0", "meta".
+    The torch device to use when initializing the model parameters, e.g. "cpu", "npu:0", "meta".
     """
 
     init_fn: InitFnType = InitFnType.normal

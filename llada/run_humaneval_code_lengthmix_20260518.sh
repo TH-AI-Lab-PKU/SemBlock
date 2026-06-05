@@ -2,11 +2,11 @@
 set -euo pipefail
 
 if [[ $# -lt 3 ]]; then
-  echo "Usage: $0 <gpu> <block_length> <shard_id>"
+  echo "Usage: $0 <npu> <block_length> <shard_id>"
   exit 1
 fi
 
-GPU="$1"
+NPU="$1"
 BLOCK_LENGTH="$2"
 SHARD_ID="$3"
 
@@ -38,8 +38,8 @@ HF_ALLOW_CODE_EVAL=1 \
 HF_DATASETS_TRUST_REMOTE_CODE=true \
 TOKENIZERS_PARALLELISM=false \
 LLADA_HUMANEVAL_SUBSET_MANIFEST="${manifest}" \
-CUDA_VISIBLE_DEVICES="${GPU}" \
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+ASCEND_RT_VISIBLE_DEVICES="${NPU}" \
+NPU_VISIBLE_DEVICES="${NPU}" \
 "${ACCELERATE_BIN}" launch --num_processes=1 eval_llada_semantic.py \
   --tasks "${TASK_NAME}" \
   --include_path "${TASK_PATH}" \

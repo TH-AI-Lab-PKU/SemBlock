@@ -11,7 +11,7 @@ GUM_HEAD_PATH="${OLD_LLADA}/checkpoints/gum_direct_20260413/boundary_head_best.p
 MATH_HEAD_PATH="${OLD_LLADA}/checkpoints/math_external_aqua_only_head_20260428/boundary_head_last.pt"
 TASK_PATH="${OLD_LLADA}/eval_tasks"
 
-MIN_FREE_MB="${MIN_FREE_MB:-50000}"
+ALLOWED_NPUS="${ALLOWED_NPUS:-0}"
 SLEEP_SECONDS="${SLEEP_SECONDS:-300}"
 
 export HF_HOME="${ROOT_DIR}/cache/hf"
@@ -21,7 +21,6 @@ export HF_ALLOW_CODE_EVAL=1
 export NLTK_DATA="/home/nvme04/unknow/nltk_data"
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONNOUSERSITE=1
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 mkdir -p "${ROOT_DIR}/logs" "${ROOT_DIR}/results" "${ROOT_DIR}/resume" "${ROOT_DIR}/traces" "${ROOT_DIR}/overlap" "${HF_HOME}"
 
@@ -33,30 +32,12 @@ require_path() {
   fi
 }
 
-wait_for_gpu() {
-  while true; do
-    local gpu
-    gpu="$(
-      nvidia-smi --query-gpu=index,memory.free --format=csv,noheader,nounits \
-        | awk -F, -v min_free="${MIN_FREE_MB}" '
-            {
-              gsub(/ /, "", $1);
-              gsub(/ /, "", $2);
-              if ($2 + 0 >= min_free) {
-                print $1;
-                exit;
-              }
-            }'
-    )"
-    if [[ -n "${gpu}" ]]; then
-      echo "${gpu}"
-      return 0
-    fi
-    date >&2
-    nvidia-smi --query-gpu=index,memory.used,memory.free --format=csv,noheader,nounits >&2
-    echo "No GPU with >= ${MIN_FREE_MB} MB free; sleeping ${SLEEP_SECONDS}s." >&2
-    sleep "${SLEEP_SECONDS}"
-  done
+wait_for_npu() {
+  local npu="${ALLOWED_NPUS%%,*}"
+  if command -v npu-smi >/dev/null 2>&1; then
+    npu-smi info -i "${npu}" >&2 || npu-smi info >&2 || true
+  fi
+  echo "${npu}"
 }
 
 run_eval() {
@@ -72,12 +53,12 @@ run_eval() {
   fi
 
   mkdir -p "${trace_dir}"
-  local gpu
-  gpu="$(wait_for_gpu)"
-  echo "[run] ${name} on GPU ${gpu}"
+  local npu
+  npu="$(wait_for_npu)"
+  echo "[run] ${name} on NPU ${npu}"
   (
     cd "${repo_dir}"
-    CUDA_VISIBLE_DEVICES="${gpu}" "${PYTHON_BIN}" "$@"
+    ASCEND_RT_VISIBLE_DEVICES="${npu}" NPU_VISIBLE_DEVICES="${npu}" "${PYTHON_BIN}" "$@"
   ) > "${ROOT_DIR}/logs/${name}.log" 2>&1
 }
 

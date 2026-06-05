@@ -2,11 +2,11 @@
 set -euo pipefail
 
 if [[ $# -lt 2 || $# -gt 3 ]]; then
-  echo "Usage: $0 <gpu> <block_length> [wait_for_tmux_session]"
+  echo "Usage: $0 <npu> <block_length> [wait_for_tmux_session]"
   exit 1
 fi
 
-GPU="$1"
+NPU="$1"
 BLOCK_LENGTH="$2"
 WAIT_FOR_SESSION="${3:-}"
 
@@ -17,17 +17,9 @@ if [[ -n "${WAIT_FOR_SESSION}" ]]; then
   done
 fi
 
-WAIT_FOR_GPU_FREE="${WAIT_FOR_GPU_FREE:-0}"
-MAX_USED_MIB="${MAX_USED_MIB:-20000}"
-if [[ "${WAIT_FOR_GPU_FREE}" == "1" ]]; then
-  while true; do
-    USED_MIB="$(nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits -i "${GPU}" | tr -d '[:space:]')"
-    if [[ "${USED_MIB}" =~ ^[0-9]+$ && "${USED_MIB}" -le "${MAX_USED_MIB}" ]]; then
-      break
-    fi
-    echo "$(date '+%F %T') waiting for GPU ${GPU}: used ${USED_MIB:-unknown} MiB > ${MAX_USED_MIB} MiB"
-    sleep 300
-  done
+WAIT_FOR_NPU_READY="${WAIT_FOR_NPU_READY:-0}"
+if [[ "${WAIT_FOR_NPU_READY}" == "1" && -x "$(command -v npu-smi 2>/dev/null)" ]]; then
+  npu-smi info -i "${NPU}" >/dev/null 2>&1 || npu-smi info >/dev/null 2>&1 || true
 fi
 
 REPO_DIR="/home/nvme01/workspace/AdaBlock-dLLM-main/llada"
@@ -54,12 +46,12 @@ MODEL_ARGS="model_path=${MODEL_PATH},block_strategy=${STRATEGY},block_length=${B
 
 cd "${REPO_DIR}"
 
-echo "$(date '+%F %T') starting ${RUN_NAME} on GPU ${GPU}"
+echo "$(date '+%F %T') starting ${RUN_NAME} on NPU ${NPU}"
 HF_ALLOW_CODE_EVAL=1 \
 HF_DATASETS_TRUST_REMOTE_CODE=true \
 PYTHONNOUSERSITE=1 \
-CUDA_VISIBLE_DEVICES="${GPU}" \
-PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+ASCEND_RT_VISIBLE_DEVICES="${NPU}" \
+NPU_VISIBLE_DEVICES="${NPU}" \
 "${PYTHON_BIN}" "${REPO_DIR}/eval_llada_adablock.py" \
   --model llada_dist \
   --tasks "${TASK_NAME}" \

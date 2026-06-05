@@ -2,11 +2,11 @@
 set -euo pipefail
 
 if [[ $# -lt 3 ]]; then
-  echo "Usage: $0 <gpu> <block_list_comma> <shard_id> [shard_id...]"
+  echo "Usage: $0 <npu> <block_list_comma> <shard_id> [shard_id...]"
   exit 1
 fi
 
-GPU="$1"
+NPU="$1"
 BLOCK_LIST="$2"
 shift 2
 
@@ -23,7 +23,7 @@ for shard_id in "$@"; do
       echo "$(date '+%F %T') skip complete b${block_length} shard${shard_id}: ${out_file}"
       continue
     fi
-    echo "$(date '+%F %T') run exact SOTA b${block_length} shard${shard_id} on GPU ${GPU}"
-    bash "${RUNNER}" "${GPU}" "${block_length}" "${shard_id}"
+    echo "$(date '+%F %T') run exact SOTA b${block_length} shard${shard_id} on NPU ${NPU}"
+    bash "${RUNNER}" "${NPU}" "${block_length}" "${shard_id}"
   done
 done

@@ -15,12 +15,13 @@ echo "$(date '+%F %T') logging to ${LOG_FILE}"
 
 cd "${OPENCOMPASS_DIR}"
 export PYTHONPATH="${OPENCOMPASS_DIR}:${PYTHONPATH_EXTRA}:${PYTHONPATH:-}"
-export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0,1}"
+export ASCEND_RT_VISIBLE_DEVICES="${ASCEND_RT_VISIBLE_DEVICES:-0,1}"
+export NPU_VISIBLE_DEVICES="${NPU_VISIBLE_DEVICES:-${ASCEND_RT_VISIBLE_DEVICES}}"
 
-echo "$(date '+%F %T') starting LLaDA-1.5 HumanEval B0=16 on CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES}"
+echo "$(date '+%F %T') starting LLaDA-1.5 HumanEval B0=16 on ASCEND_RT_VISIBLE_DEVICES=${ASCEND_RT_VISIBLE_DEVICES}"
 "${PYTHON_BIN}" run.py "${WORKTREE_DIR}/llada/opencompass_llada_1p5_humaneval_b16_confidence.py" -w "${OUT_DIR}"
 
-echo "$(date '+%F %T') starting LLaDA-1.5 HumanEval B0=64 on CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES}"
+echo "$(date '+%F %T') starting LLaDA-1.5 HumanEval B0=64 on ASCEND_RT_VISIBLE_DEVICES=${ASCEND_RT_VISIBLE_DEVICES}"
 "${PYTHON_BIN}" run.py "${WORKTREE_DIR}/llada/opencompass_llada_1p5_humaneval_b64_confidence.py" -w "${OUT_DIR}"
 
 echo "$(date '+%F %T') done LLaDA-1.5 HumanEval B0=16/64"

@@ -15,9 +15,11 @@ from datasets import load_dataset
 from tqdm import tqdm
 
 try:
+    from .accelerator_utils import default_device, manual_seed_all
     from .math_oracle_benchmark import build_gsm8k_cot_prompt, compute_oracle_generation_budget, load_gsm8k_cot_fewshots
     from .math_oracle_utils import build_math_oracle_document, extract_gsm8k_answer, is_gsm8k_correct
 except ImportError:  # pragma: no cover
+    from accelerator_utils import default_device, manual_seed_all
     from math_oracle_benchmark import build_gsm8k_cot_prompt, compute_oracle_generation_budget, load_gsm8k_cot_fewshots
     from math_oracle_utils import build_math_oracle_document, extract_gsm8k_answer, is_gsm8k_correct
 
@@ -41,8 +43,7 @@ def set_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
+    manual_seed_all(seed)
 
 
 def timestamp_slug() -> str:
@@ -484,7 +485,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=8)
     parser.add_argument("--valid-doc-count", type=int, default=2)
     parser.add_argument("--gsm8k-fewshot", type=int, default=5)
-    parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--device", type=str, default=default_device(0))
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--steps", type=int, default=DEFAULT_STEPS)
     parser.add_argument("--gen-length", type=int, default=DEFAULT_GEN_LENGTH)

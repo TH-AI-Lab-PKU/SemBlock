@@ -23,6 +23,7 @@ import numpy as np
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
 from model.modeling_llada import LLaDAModelLM
+from accelerator_utils import default_device
 from semantic_boundary import score_boundary_window
 from prior_boundary import choose_boundary_length_from_scores, compute_block_length_prior
 from oracle_boundary import extract_oracle_block_sizes
@@ -707,7 +708,7 @@ def get_transfer_index(
     return x0, transfer_index
 
 def main():
-    device = 'cuda'
+    device = default_device()
 
     model = LLaDAModelLM.from_pretrained('GSAI-ML/LLaDA-8B-Instruct', trust_remote_code=True, torch_dtype=torch.bfloat16).to(device).eval()
     tokenizer = AutoTokenizer.from_pretrained('GSAI-ML/LLaDA-8B-Instruct', trust_remote_code=True)

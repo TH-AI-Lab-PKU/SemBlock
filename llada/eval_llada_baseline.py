@@ -35,6 +35,7 @@ from lm_eval.api.registry import register_model
 from tqdm import tqdm
 import os
 from transformers import AutoTokenizer, AutoModel, AutoConfig
+from accelerator_utils import default_device, empty_cache
 from eval_prompting import (
     build_generation_prompt,
     should_use_raw_completion_decode,
@@ -49,9 +50,6 @@ def set_seed(seed):
     torch.manual_seed(seed)
     random.seed(seed)
     np.random.seed(seed)
-
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
 
 
 @register_model("llada_dist")
@@ -68,7 +66,7 @@ class LLaDAEvalHarness(LM):
         gen_length=1024,
         block_length=1024,
         remasking='low_confidence',
-        device="cuda",
+        device=default_device(),
         use_cache=False,
         threshold=None,
         factor=None,
@@ -292,7 +290,7 @@ class LLaDAEvalHarness(LM):
                 is_target_greedy_dec = self.suffix_greedy_prediction(prefix, target)
 
                 out.append((ll, 1.0 if is_target_greedy_dec else 0.0))
-        torch.cuda.empty_cache()
+        empty_cache()
         return out
 
     def loglikelihood_rolling(self, requests):

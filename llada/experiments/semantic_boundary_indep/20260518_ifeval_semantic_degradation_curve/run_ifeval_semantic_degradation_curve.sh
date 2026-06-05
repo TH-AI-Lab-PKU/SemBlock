@@ -11,9 +11,7 @@ SOURCE_ROOT="${CURRENT_REPO}/llada/experiments/semantic_boundary_indep/20260516_
 CLEAN_TRACE="${SOURCE_ROOT}/traces/ifeval/gum_head_tenth"
 
 LIMIT="${LIMIT:-55}"
-ALLOWED_GPUS="${ALLOWED_GPUS:-6,7}"
-MIN_FREE_MB="${MIN_FREE_MB:-22000}"
-MAX_UTIL="${MAX_UTIL:-100}"
+ALLOWED_NPUS="${ALLOWED_NPUS:-6,7}"
 SLEEP_SECONDS="${SLEEP_SECONDS:-180}"
 
 export HF_HOME="${ROOT_DIR}/cache/hf"
@@ -23,7 +21,6 @@ export HF_ALLOW_CODE_EVAL=1
 export NLTK_DATA="/home/nvme04/unknow/nltk_data"
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONNOUSERSITE=1
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 mkdir -p "${ROOT_DIR}/logs" "${ROOT_DIR}/results" "${ROOT_DIR}/resume" "${ROOT_DIR}/traces" "${ROOT_DIR}/overlap" "${HF_HOME}"
 
@@ -35,38 +32,12 @@ require_path() {
   fi
 }
 
-wait_for_gpu() {
-  while true; do
-    local gpu
-    gpu="$(
-      nvidia-smi --query-gpu=index,memory.free,utilization.gpu --format=csv,noheader,nounits \
-        | awk -F, -v allowed="${ALLOWED_GPUS}" -v min_free="${MIN_FREE_MB}" -v max_util="${MAX_UTIL}" '
-            BEGIN {
-              split(allowed, ids, ",");
-              for (i in ids) ok[ids[i] + 0] = 1;
-            }
-            {
-              gsub(/ /, "", $1);
-              gsub(/ /, "", $2);
-              gsub(/ /, "", $3);
-              idx = $1 + 0;
-              free = $2 + 0;
-              util = $3 + 0;
-              if (ok[idx] && free >= min_free && util <= max_util) {
-                print idx;
-                exit;
-              }
-            }'
-    )"
-    if [[ -n "${gpu}" ]]; then
-      echo "${gpu}"
-      return 0
-    fi
-    date >&2
-    nvidia-smi --query-gpu=index,memory.used,memory.free,utilization.gpu --format=csv,noheader,nounits >&2
-    echo "No GPU in ${ALLOWED_GPUS} with >= ${MIN_FREE_MB} MB free; sleeping ${SLEEP_SECONDS}s." >&2
-    sleep "${SLEEP_SECONDS}"
-  done
+wait_for_npu() {
+  local npu="${ALLOWED_NPUS%%,*}"
+  if command -v npu-smi >/dev/null 2>&1; then
+    npu-smi info -i "${npu}" >&2 || npu-smi info >&2 || true
+  fi
+  echo "${npu}"
 }
 
 latest_result() {
@@ -89,12 +60,12 @@ run_variant() {
   fi
 
   mkdir -p "${trace_dir}" "${save_dir}" "${result_dir}"
-  local gpu
-  gpu="$(wait_for_gpu)"
-  echo "[run] ${name}: mode=${mode}, strength=${strength}, gpu=${gpu}, limit=${LIMIT}"
+  local npu
+  npu="$(wait_for_npu)"
+  echo "[run] ${name}: mode=${mode}, strength=${strength}, npu=${npu}, limit=${LIMIT}"
   (
     cd "${CURRENT_REPO}/llada"
-    CUDA_VISIBLE_DEVICES="${gpu}" "${PYTHON_BIN}" "${CURRENT_REPO}/llada/eval_llada_adablock.py" \
+    ASCEND_RT_VISIBLE_DEVICES="${npu}" NPU_VISIBLE_DEVICES="${npu}" "${PYTHON_BIN}" "${CURRENT_REPO}/llada/eval_llada_adablock.py" \
       --model llada_dist \
       --model_args "model_path=${MODEL_PATH},block_strategy=semantic_head,block_length=32,steps=16,gen_length=512,threshold=0.9,show_speed=True,use_cache=True,boundary_prior_path=${GUM_HEAD_PATH},boundary_prior_threshold=0.75,boundary_degrade_mode=${mode},boundary_degrade_strength=${strength},trace_dir=${trace_dir},save_dir=${save_dir}" \
       --tasks ifeval_local \

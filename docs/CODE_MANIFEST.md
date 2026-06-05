@@ -31,6 +31,7 @@ llada/models/local_boundary_corrector.py
 ```text
 llada/eval_llada_adablock.py
 llada/eval_llada_semantic.py
+llada/accelerator_utils.py
 llada/generate_semantic.py
 llada/semantic_boundary.py
 llada/semantic_scheduler.py

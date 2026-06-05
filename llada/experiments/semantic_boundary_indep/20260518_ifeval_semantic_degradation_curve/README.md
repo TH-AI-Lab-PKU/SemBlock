@@ -12,7 +12,7 @@ Setup:
   selected block boundary is perturbed at runtime.
 - Boundary fidelity: exact Jaccard against the clean semantic-head trace.
 - Performance: final IFEval prompt/instance strict and loose accuracy.
-- GPU policy: only GPUs 6 and 7 by default.
+- NPU policy: only NPUs 6 and 7 by default.
 
 Variants:
 

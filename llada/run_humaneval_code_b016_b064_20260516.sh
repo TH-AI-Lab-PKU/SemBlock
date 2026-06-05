@@ -2,11 +2,11 @@
 set -euo pipefail
 
 if [[ $# -lt 2 ]]; then
-  echo "Usage: $0 <gpu> <shard_id>"
+  echo "Usage: $0 <npu> <shard_id>"
   exit 1
 fi
 
-GPU="$1"
+NPU="$1"
 SHARD_ID="$2"
 
 REPO_DIR="/home/ubuntu/.config/superpowers/worktrees/AdaBlock-dLLM-main/semantic-boundary-indep-20260409/llada"
@@ -34,9 +34,9 @@ run_block() {
   HF_DATASETS_TRUST_REMOTE_CODE=true \
   TOKENIZERS_PARALLELISM=false \
   LLADA_HUMANEVAL_SUBSET_MANIFEST="${manifest}" \
-  CUDA_VISIBLE_DEVICES="${GPU}" \
-  PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
-  "${ACCELERATE_BIN}" launch --num_processes=1 eval_llada_semantic.py \
+  ASCEND_RT_VISIBLE_DEVICES="${NPU}" \
+NPU_VISIBLE_DEVICES="${NPU}" \
+    "${ACCELERATE_BIN}" launch --num_processes=1 eval_llada_semantic.py \
     --tasks "${TASK_NAME}" \
     --include_path "${TASK_PATH}" \
     --num_fewshot 0 \
